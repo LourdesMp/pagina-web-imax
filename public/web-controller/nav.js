@@ -39,14 +39,29 @@ fs.collection('users').onSnapshot((querySnapshot) => {
               <a href="vacactionsAdmin.html" ><li class="btn-admi-const second-parent" >Solicitud Vacaciones</li></a>
               <a href="workerAdmin.html" ><li class="btn-admi-const second-parent" >Agregar Colaborador</li></a>
           </ul>
-        </a> </li>`;
+        </a> </li>
+        <li><a href="#/" class="admin-web">Herramientas IMAX
+        <ul class="nav-admin-web hide">
+              <a href="projectsWeb.html" ><li class="btn-admin-boletas second-parent" >Agregar Noticia Web</li></a>
+              <a href="webAddProject.html" ><li class="btn-admi-const second-parent" >Agregar Proyecto </li></a>
+          </ul>
+        </a></li> `;
 
-        const menuAdmin = document.querySelector('.admin');
-        const navAdmin = document.querySelector('.nav-admin');
-        menuAdmin.addEventListener('click', () => {
-          navAdmin.classList.toggle('hide');
-          console.log('click');
-        })
+        // const menuAdmin = document.querySelector('.admin');
+        // console.log(menuAdmin)
+        // const navAdmin = document.querySelector('.nav-admin');
+        // menuAdmin.addEventListener('click', () => {
+        //   navAdmin.classList.toggle('hide');
+        //   console.log('click');
+        // })
+
+        // const menuAdminWeb = document.querySelector(".admin-web");
+        // console.log(menuAdminWeb)
+        // const navAdminWeb = document.querySelector(".nav-admin-web");
+        // menuAdminWeb.addEventListener("click", () => {
+        //   navAdminWeb.classList.toggle("hide");
+        //   console.log("click");
+        // });
       }
 
       if (doc.data().checkLider === 'SI') {
@@ -58,6 +73,14 @@ fs.collection('users').onSnapshot((querySnapshot) => {
           navAdmin.classList.toggle('hide');
           console.log('click');
         })
+
+         const menuAdminWeb = document.querySelector(".admin-web");
+         console.log(menuAdminWeb);
+         const navAdminWeb = document.querySelector(".nav-admin-web");
+         menuAdminWeb.addEventListener("click", () => {
+           navAdminWeb.classList.toggle("hide");
+           console.log("click");
+         });
       }
 
 

@@ -35,7 +35,7 @@
                 <li><a href="vacations.html">Mis Vacaciones</a></li>
 
                 <div class="only-admin"></div>
-
+     
                 <a class="logOut">
                     <li>Cerrar sesión</li>
                 </a>
@@ -54,47 +54,75 @@
 
                 </div>
             </div>
-            <section class="add-article-container">
-                <h1>Agregar Noticia a la web</h1>
-                <form class="generate-article">
+            <section class="add-proyect-container">
+                <h1>Agregar proyecto a la web</h1>
+                <form class="generate-project">
                     <div>
-                        <label for="nameArticle">Titular de la Noticia : </label>
-                        <input type="text" name="nameArticle" id="nameArticle" class="nameArticle">
-
-                        <label for="entryDay">Fecha: </label>
-                        <input type="date" name="entryDay" class="fechaAdmin" required pattern="[0-9]{4}-[0-9]{2}-[0-9]{2}" >
-                
+                        <label for="nameProject">Nombre del proyecto: </label>
+                        <input type="text" name="nameProject" id="nameProject" class="nameProject">
+                        <label for="typeService">Tipo de Servicio</label>
+                        <input type="text" name="typeService" id="typeService" class="typeService">
                     </div>
                     <div>
-                        <label for="descriptionArticle">Descripción de la noticia: </label>
-                        <input type="text" name="descriptionArticle" id="descriptionArticle" class="descriptionArticle">
+                        <label for="descriptionProject">Descripción del proyecto: </label>
+                        <input type="text" name="descriptionProject" id="descriptionProject" class="descriptionProject">
                     </div>
 
-                    <div class="progress">
-                        <label for="">Agregar imagen principal de la noticia (Dimensiones 1000 x 400) </label>
+
+
+                    <div class="aaaaa">
+                        <label for="">Agregar imagen para el Carrusel de proyectos: (Dimensiones 800 x 800) </label>
                         
-                        <input type="file" id="addImgArticle" accept="image/*" class="addImgArticle">
-                        <label for="addImgArticle" style='font-size: 20px'>
+                    
+                        <input type="file" id="addImgCarrusel" accept="image/*" class="addImgCarrusel">
+                        <label for="addImgCarrusel" style='font-size: 20px'>
                             <i class="fas fa-camera"></i>
                         </label> <br>
                         <div class="containerProgress hide">
                             <!-- <progress value= "0" max= "100" id="uploader">0%</progress> -->
-                            <div class="progresslineArticle"></div>
+                            <div class="progresslineCarrusel"></div>
                         </div>
+
                         <!-- <div class="hide divImg">
                         <span class="deleteImg">❌</span>
                         <img class="picPost" />
                     </div> -->
                     </div>
 
+                    <div class="progress">
+                        <label for="">Agregar imagen principal: (Dimensiones 1000 x 400) </label>
+                       
+                        
+                        <input type="file" id="addImgLarge" accept="image/*" class="addImgLarge">
+                        <label for="addImgLarge" style='font-size: 20px'>
+                            <i class="fas fa-camera"></i>
+                        </label> <br>
+                         <div class="containerProgress hide">
+                            <!-- <progress value= "0" max= "100" id="uploader">0%</progress> -->
+                            <div class="progressline"></div>
+                        </div>
+                        <!-- <div class="hide divImg">
+                        <span class="deleteImg">❌</span>
+                        <img class="picPost" />
+                    </div> -->
+                    </div>
+                    <div class="box-file">
+                        <label for="checkProjectHome">Proyecto-home : </label>
+                        <select name="checkProjectHome" class="checkProjectHome" required>
+                            <option value="NO">NO</option>
+                            <option value="SI">SI</option>
+                        </select>
+                    </div>
                     <div class="writePost">   
 
-                        <textarea id="newArticle" class="newArticle" rows="10" cols="50"
-                            placeholder="Contenido de la noticia"></textarea>
+                        <textarea id="newPublication" class="newPublication" rows="10" cols="50"
+                            placeholder="Contenido del proyecto"></textarea>
                     </div>
-                    <button type="submit" id="btnNewArticle" class="btnNewArticle">Guardar</button>
+                    <button type="submit" id="btnNewPublication" class="btnNewPost">Guardar</button>
                 </form>
             </section>
+
+            
         </div>
 
 
@@ -120,7 +148,7 @@
 
 
     <script src="../web-controller/nav.js"></script>
-    <script src="../web-controller/projectsWeb.js"> </script>
+    <script src="../web-controller/webAddProject.js"> </script>
 </body>
 
 </html>
