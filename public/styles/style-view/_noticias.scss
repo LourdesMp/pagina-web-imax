@@ -60,13 +60,14 @@
         }
 
         .second-parent:hover {
-          background-color: #afafaf;
+          background-color: rgba(252, 118, 23, 0.88);
         }
 
       }
 
       li:hover {
         background-color: #F3F3F3;
+        
       }
 
 
@@ -87,7 +88,7 @@
     .column-noticias {
       display: flex;
       flex-direction: column;
-      background: #F3F3F3;
+      background: #F4F4F4;
       width: 75%;
 
 
@@ -97,6 +98,7 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
+      
 
         .big-title {
           font-weight: 700;
@@ -132,7 +134,7 @@
 
         .textarea {
           width: 100%;
-          background: #AEB6B8;
+          background: #eaeaea;
           border-radius: 15px;
           padding: 0.8em;
           outline: none;
@@ -181,7 +183,7 @@
           font-weight: 700;
           outline: none;
           border: none;
-          background-color: #00ADEF;
+          background-color: #fc5717;
         }
 
         .btnPost:hover {

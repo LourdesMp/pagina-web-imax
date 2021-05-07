@@ -4,11 +4,12 @@
 .header-nosotros {
     width: 100%;
     z-index: 3;
-    // position: absolute;
+    // position: relative;
     top: 0%;
 
     .menu {
         display: flex;
+        // position: absolute;
     }
 
     .nav-bar {
@@ -65,7 +66,7 @@
 
     .intro-nosotros {
         font-weight: 400;
-        padding: 3% 5%;
+        padding: 1% 5% 3% 5%;
         margin: 1%;
         border-radius: 10px;
         text-align: justify;
@@ -184,7 +185,7 @@
     }
 }
 
-/// estilos de servicios
+/// SECCION SERVICIOS NUEVA VERSION
 .servicios-container {
     display: flex;
     flex-direction: column;
@@ -316,16 +317,20 @@
 @media screen and (max-width: 800px) {
     main {
         padding: 0;
-        margin-top: 20%;
+        margin-top: 0%;
     }
 
     .header-nosotros {
-        width: 100%;
-        z-index: 3;
-        position: absolute;
-        top: 0%;
-        margin: 0;
-        margin-left: 0;
+        // width: 100%;
+        // z-index: 3;
+        position: relative;
+        // top: 0%;
+        // margin: 0;
+        // margin-left: 0;
+        .menu{
+            position: absolute;
+            width: 90%;
+        }
 
         .nav-bar {
             background: #5cbcdf;

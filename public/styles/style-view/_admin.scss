@@ -49,7 +49,7 @@
                     padding: 0;   
                 }
                 .second-parent:hover{
-                    background-color: #afafaf;
+                    background-color: rgba(252, 118, 23, 0.88);
     
 
 
@@ -124,6 +124,7 @@
                 border: none;
                 background-color:  #ffffff;
                 font-size: 14px;
+                margin-right: 10px;
             }
 
             .box-search{
@@ -167,7 +168,7 @@
                     font-weight: 700;
                     outline: none;
                     border: none;
-                    background-color: #8DB9CA;
+                    background-color: #fc7617;
             }
 
             .btn-generar-boleta:active,   .btn-generar-cts:active {
@@ -257,7 +258,7 @@
 
     .container-add-worker{
         background-color: #F3F3F3;
-        height: 85%;
+        height: 90%;
         width: 90%;
 
         .title-new{
@@ -369,7 +370,7 @@
                 font-weight: 700;
                 outline: none;
                 border: none;
-                background-color: #00ADEF;
+                background-color: #fc5817;
             }
 
             .add-worker:active{

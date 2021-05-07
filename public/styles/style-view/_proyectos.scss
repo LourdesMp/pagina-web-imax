@@ -321,6 +321,19 @@
             width: 100%;
             height: 40vh;
         }
+        .head-project{
+            h1{
+                font-size: 20px;
+            }
+             div{
+            position: relative;
+            right: 35px;
+
+            a{
+                position: absolute;
+            }
+        }
+    }
 
         .service-container .content-service {
             flex-direction: column;

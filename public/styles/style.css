@@ -63,7 +63,7 @@
 
 .nosotros-container .intro-nosotros {
   font-weight: 400;
-  padding: 3% 5%;
+  padding: 1% 5% 3% 5%;
   margin: 1%;
   border-radius: 10px;
   text-align: justify;
@@ -319,15 +319,14 @@
 @media screen and (max-width: 800px) {
   main {
     padding: 0;
-    margin-top: 20%;
+    margin-top: 0%;
   }
   .header-nosotros {
-    width: 100%;
-    z-index: 3;
+    position: relative;
+  }
+  .header-nosotros .menu {
     position: absolute;
-    top: 0%;
-    margin: 0;
-    margin-left: 0;
+    width: 90%;
   }
   .header-nosotros .nav-bar {
     background: #5cbcdf;
@@ -961,6 +960,16 @@
     width: 100%;
     height: 40vh;
   }
+  .single-project .head-project h1 {
+    font-size: 20px;
+  }
+  .single-project .head-project div {
+    position: relative;
+    right: 35px;
+  }
+  .single-project .head-project div a {
+    position: absolute;
+  }
   .single-project .service-container .content-service {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1172,7 +1181,7 @@
 }
 
 .container-noticias .header-intranet .menu li .second-parent:hover {
-  background-color: #afafaf;
+  background-color: rgba(252, 118, 23, 0.88);
 }
 
 .container-noticias .header-intranet .menu li:hover {
@@ -1202,7 +1211,7 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background: #F3F3F3;
+  background: #F4F4F4;
   width: 75%;
 }
 
@@ -1257,7 +1266,7 @@
 
 .container-noticias .box-noticias .create-post .writePost .textarea {
   width: 100%;
-  background: #AEB6B8;
+  background: #eaeaea;
   border-radius: 15px;
   padding: 0.8em;
   outline: none;
@@ -1308,7 +1317,7 @@
   font-weight: 700;
   outline: none;
   border: none;
-  background-color: #00ADEF;
+  background-color: #fc5717;
 }
 
 .container-noticias .box-noticias .create-post .box-publicar .btnPost:hover {
@@ -1586,7 +1595,7 @@
 }
 
 .container-pagos .header-intranet-pagos .menu li .second-parent:hover {
-  background-color: #afafaf;
+  background-color: rgba(252, 118, 23, 0.88);
 }
 
 .container-pagos .header-intranet-pagos .menu li:hover {
@@ -1653,6 +1662,7 @@
 
 .box-boletas .container-boletas .box-search .note {
   width: 40%;
+  color: #fc5717;
 }
 
 .box-boletas .container-boletas .box-search input {
@@ -2145,7 +2155,7 @@
 }
 
 .container-admin .header-intranet-admin .menu li .second-parent:hover {
-  background-color: #afafaf;
+  background-color: rgba(252, 118, 23, 0.88);
 }
 
 .container-admin .header-intranet-admin .menu li:hover {
@@ -2239,6 +2249,7 @@
   border: none;
   background-color: #ffffff;
   font-size: 14px;
+  margin-right: 10px;
 }
 
 .box-admin-boletas .box-generate-ticket .generate-ticket .box-search {
@@ -2290,7 +2301,7 @@
   font-weight: 700;
   outline: none;
   border: none;
-  background-color: #8DB9CA;
+  background-color: #fc7617;
 }
 
 .box-admin-boletas .box-generate-ticket .generate-ticket .btn-generar-boleta:active, .box-admin-boletas .box-generate-ticket .generate-ticket .btn-generar-cts:active {
@@ -2401,7 +2412,7 @@
 
 .box-admin-boletas .container-add-worker {
   background-color: #F3F3F3;
-  height: 85%;
+  height: 90%;
   width: 90%;
 }
 
@@ -2530,7 +2541,7 @@
   font-weight: 700;
   outline: none;
   border: none;
-  background-color: #00ADEF;
+  background-color: #fc5817;
 }
 
 .box-admin-boletas .box-fill-data .box-button-add .add-worker:active {
@@ -2913,7 +2924,7 @@
   font-weight: 700;
   outline: none;
   border: none;
-  background-color: #00ADEF;
+  background-color: #fc5717;
   margin: 2% 0 1% 35%;
 }
 
@@ -3255,7 +3266,7 @@
 .header-web {
   width: 100%;
   z-index: 3;
-  position: absolute;
+  position: relative;
   top: 0%;
 }
 
@@ -3263,6 +3274,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: absolute;
 }
 
 .header-web .nav-bar {
@@ -4555,14 +4567,10 @@ input.whats-input[type=text]:focus {
 @media screen and (max-width: 800px) {
   #container {
     padding: 0;
+    margin-top: 0%;
   }
-  .header-web {
-    width: 100%;
-    z-index: 3;
-    position: absolute;
-    top: 0%;
-    margin: 0;
-    margin-left: 0;
+  .header-web .menu {
+    width: 90%;
   }
   .header-web .nav-bar {
     background: #5cbcdf;
@@ -4603,8 +4611,12 @@ input.whats-input[type=text]:focus {
   .flexslider ul img {
     height: 20.25rem;
   }
+  .flex-direction-nav a {
+    top: 40%;
+  }
   .flexslider .flex-control-nav.flex-control-paging {
     bottom: 170px;
+    display: none;
   }
   .caption-slider {
     margin: 0 0 0 25%;

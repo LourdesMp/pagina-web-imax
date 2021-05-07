@@ -54,11 +54,12 @@
 .header-web {
     width: 100%;
     z-index: 3;
-    position: absolute;
+    position: relative;
     top: 0%;
 
     .menu {
         display: flex;
+        position: absolute;
     }
 
     .nav-bar {
@@ -1169,6 +1170,13 @@ strong {
     .nav-bottom {
         width: 320px;
     }
+
+    // .float{
+    //     right: 5px;
+    // }
+    // .circle-anime{
+    //     right: 15px;
+    // }
 }
 
 .whatsapp-button {
@@ -1477,18 +1485,22 @@ input.whats-input[type=text]:focus {
 @media screen and (max-width: 800px) {
     #container {
         padding: 0;
-        // margin-top: 5%;
+        margin-top: 0%;
     }
 
 
     //menu de navegacion
     .header-web {
-        width: 100%;
-        z-index: 3;
-        position: absolute;
-        top: 0%;
-        margin: 0;
-        margin-left: 0;
+        // width: 100%;
+        // z-index: 3;
+        // position: relative;
+        // top: 0%;
+        // margin: 0;
+        // margin-left: 0;
+        .menu{
+            // position: absolute;
+            width: 90%;
+        }
 
         .nav-bar {
             background: #5cbcdf;
@@ -1539,9 +1551,13 @@ input.whats-input[type=text]:focus {
     .flexslider ul img {
         height: 20.25rem;
     }
+    .flex-direction-nav a {
+        top: 40%;
+    }
 
     .flexslider .flex-control-nav.flex-control-paging {
         bottom: 170px;
+        display: none;
     }
 
     .caption-slider {
