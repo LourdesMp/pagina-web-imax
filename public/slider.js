@@ -7,7 +7,7 @@ $(document).ready(function(){
 
 $(document).ready(function () {
   $(".sliderComments").flexslider({
-    slideshowSpeed: 15000,
+    slideshowSpeed: 9000,
   });
 });
 
