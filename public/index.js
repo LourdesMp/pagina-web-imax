@@ -29,13 +29,7 @@ function sendEmail(e) {
     email,
     message,
   };
-  emailjs
-    .send(
-      "gmailMessage",
-      "template_b5amrsu",
-      templateParams,
-      "user_0loQaVMyGMBSx2TKKJJQW"
-    )
+  emailjs.send("gmailMessage","template_b5amrsu",templateParams,"user_0loQaVMyGMBSx2TKKJJQW")
     .then(
       function (response) {
         console.log("SUCCESS!", response.status, response.text);

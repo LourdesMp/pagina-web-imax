@@ -1,4 +1,4 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -7,25 +7,17 @@
         content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-
-     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-storage.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Courgette&family=Noto+Sans+JP:wght@100;400;700&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="./styles/style.css">
-    <title>Nosotros</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>Servicios</title>
 </head>
 
 <body>
     <header class="header-nosotros">
         <span class="nav-bar" id="btn-menu"><i class="iconMenu fas fa-bars"></i>Menú</span>
         <nav class="menu">
-            <img class="logo" src="./assets/LOGO IMAX PNG ALTA.png">
+            <img class="logo" src="../assets/LOGO IMAX PNG ALTA.png">
             <ul class="menu-list" id="menu-list">
-                <li><a href="./index.html">Home</a></li>
+                <li><a href="../index.html">Home</a></li>
                 <li><a href="./nosotros.html">Nosotros</a></li>
                 <li><a href="./servicios.html">Servicios</a></li>
                 <li><a href="./proyectos.html">Proyectos</a></li>
@@ -35,35 +27,56 @@
         </nav>
     </header>
     <main>
-        <div class="nav-bottom">
+        <section class="single-project ">
+            <div class="head-project">
+                <h1>Gestión y Desarrollo de Proyectos (GDP)</h1>
+                <div><i class="fas fa-long-arrow-alt-left"></i> <a href="./servicios.html">Volver</a></div>
+            </div>
+            <div class="box-img-service"><img
+                    src="../assets/servicios/gestion-y-desarrollo-de-proyectos/img-principal.jpg" alt=""></div>
 
-            <div class="popup-whatsapp fadeIn">
-                <div class="content-whatsapp -top"><button type="button" class="closePopup">
-                        <i class="material-icons icon-font-color">close</i>
-                    </button>
+            <div class="service-container">
+                <div class="content-service">
+                    <div class="column-first">
 
-                    <p> <i class="fas fa-user"></i> Hola, ¿en que podemos ayudarle? </p>
+                        <p>Asesoramos a promotores inmobiliarios, inversionistas,
+                            empresas e instituciones financieras en la gestión del proyecto, desde la elección del
+                            terreno, analizando oportunidades de inversiones inmobiliarias. Gestionamos el desarrollo
+                            de las distintas especialidades, coordinando y supervisando
+                            la compatibilización del proyecto integral desde su concepción hasta la obtención de la
+                            licencia de edificación. Asimismo, gestionamos la formalización de la propiedad desde la
+                            conformidad de obra hasta el registro oficial del inmueble o
+                            inmuebles.</p>
+
+                        <p class="colored-p">Servicios:</p>
+
+                        <div class="box-list">
+
+                            <ul>
+                                <li>Gestión de superficie – análisis de factibilidad económica
+                                    en base a cabida arquitectónica.</li>
+                                <li>Diseño y desarrollo (arquitectura, Indeci, estructuras,
+                                    instalaciones: eléctricas, mecánicas, sanitarias, gas).</li>
+                                <li>Gestión documentaria: Trámite licencias (Edificación,
+                                    demolición, etc.), Saneamiento legal.</li>
+
+                            </ul>
+
+                        </div>
+                    </div>
+                    <div class="column-second">
+                        <div class="img-small-a">
+                            <img src="../assets/servicios/tasaciones/img-secundaria.jpg" alt="">
+                        </div>
+                    </div>
 
                 </div>
-                <div class="content-whatsapp -bottom">
-                    <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
 
-
-
-
-                    <button class="send-msPopup" id="send-btn" type="button">
-                        <i class="material-icons icon-font-color--black">send</i>
-                    </button>
-
+                <div class="box-btn-service">
+                    <a class="btn-service" href="./contact.html">Cotizar Servicio</a>
                 </div>
             </div>
-            <button type="button" id="whats-openPopup" class="whatsapp-button">
-                <div class="float">
-                    <i class="fa fa-whatsapp my-float"></i></div>
-            </button>
-            <div class="circle-anime"></div>
-        </div>
-       
+        </section>
 
     </main>
     <footer>
@@ -75,7 +88,7 @@
 
             <div class="box-contac-date">
                 <div>
-                    <img src="./assets/iconos/phone.png" alt="">
+                    <img src="../assets/iconos/phone.png" alt="">
                     <p>(51) – 713 1326</p>
                 </div>
                 <div>
@@ -111,26 +124,8 @@
         </div>
 
     </footer>
-    <script>
-        const firebaseConfig = {
-            apiKey: "AIzaSyAPvuYSkfkOfaRObLXvtDiZjVoQGYDIacc",
-            authDomain: "web-imax.firebaseapp.com",
-            projectId: "web-imax",
-            storageBucket: "web-imax.appspot.com",
-            messagingSenderId: "114819498377",
-            appId: "1:114819498377:web:02e7671a7255f711cf6158",
-            measurementId: "G-P8W33C2X62"
-        };
-        firebase.initializeApp(firebaseConfig);
-        console.log(firebase.name)
-        const auth = firebase.auth();
-        const fs = firebase.firestore();
-        firebase.storage();
-        firebase.analytics();
-    </script>
-   
 
-<script src="script2.js"></script>
+  <script src="../menu.js"></script>
 </body>
 
-</html> --> 
+</html>
