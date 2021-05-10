@@ -361,6 +361,12 @@
   .header-nosotros .mostrar {
     margin-left: 0;
   }
+  .servicios-container .box-par .square figure .capa-detailed .capa1 h2 {
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
   .nosotros-container .box-par {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -588,7 +594,7 @@
           box-shadow: 0 0 0 1px black, 0 0 0 0px, 0 2px 3px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
   .box-contact-form-date {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -955,7 +961,7 @@
           box-shadow: 1px 5px #888888;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
   .single-project .box-img-service {
     width: 100%;
     height: 40vh;
@@ -3213,7 +3219,7 @@
   color: #fc7617;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 500px) {
   .notice-web-container {
     padding-left: 0%;
   }
@@ -3817,6 +3823,7 @@ strong {
 .sliderComments {
   width: 100%;
   height: 600px;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -3871,7 +3878,7 @@ strong {
       align-self: center;
   list-style: none;
   position: absolute;
-  bottom: -550%;
+  bottom: 2%;
   z-index: 3;
 }
 
@@ -4562,6 +4569,9 @@ input.whats-input[type=text]:focus {
 }
 
 @media screen and (max-width: 800px) {
+  .nav-bottom {
+    width: 720px;
+  }
   #container {
     padding: 0;
     margin-top: 0%;
@@ -4603,6 +4613,49 @@ input.whats-input[type=text]:focus {
     margin-left: 0;
   }
   .flexslider {
+    height: 30.25rem;
+  }
+  .flexslider ul img {
+    height: 30.25rem;
+  }
+  .flex-direction-nav a {
+    top: 40%;
+  }
+  .caption-slider {
+    margin: 0 0 0 25%;
+  }
+  .caption-slider h1,
+  .caption-slider strong {
+    font-size: 40px;
+  }
+  .caption-slider p {
+    font-size: 15px;
+  }
+  .caption-slider-beige {
+    margin: 0 0 0 40%;
+  }
+  .caption-slider-beige h1,
+  .caption-slider-beige strong {
+    font-size: 40px;
+  }
+  .caption-slider-beige p {
+    font-size: 15px;
+  }
+  .projects-container {
+    padding: 4% 10%;
+  }
+  .caption {
+    width: 70%;
+    height: 90%;
+    margin: 5% 0 0 15%;
+  }
+  .section-contact .contact-box-first .form-contact-single .send-email {
+    width: 28%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .flexslider {
     height: 20.25rem;
   }
   .flexslider ul img {
@@ -4613,7 +4666,6 @@ input.whats-input[type=text]:focus {
   }
   .flexslider .flex-control-nav.flex-control-paging {
     bottom: 170px;
-    display: none;
   }
   .caption-slider {
     margin: 0 0 0 25%;
@@ -4737,9 +4789,6 @@ input.whats-input[type=text]:focus {
     font-size: 15px;
     padding: 0 10px;
     text-align: center;
-  }
-  .sliderComments .flex-control-nav.flex-control-paging {
-    bottom: -450%;
   }
   .caption {
     width: 90%;

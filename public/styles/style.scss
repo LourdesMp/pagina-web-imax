@@ -793,6 +793,7 @@ strong {
     width: 100%;
     // max-width: 1000px;
     height: 600px;
+    position: relative;
 
     display: flex;
     flex-direction: column;
@@ -843,7 +844,7 @@ strong {
         align-self: center;
         list-style: none;
         position: absolute;
-        bottom: -550%;
+        bottom: 2%;
         z-index: 3;
 
         li {
@@ -1170,14 +1171,8 @@ strong {
     .nav-bottom {
         width: 320px;
     }
-
-    // .float{
-    //     right: 5px;
-    // }
-    // .circle-anime{
-    //     right: 15px;
-    // }
 }
+
 
 .whatsapp-button {
     display: flex;
@@ -1244,6 +1239,7 @@ strong {
     .popup-whatsapp p {
         font-size: 0.9em;
     }
+   
 }
 
 .popup-whatsapp>.content-whatsapp.-top {
@@ -1483,21 +1479,17 @@ input.whats-input[type=text]:focus {
 
 // style mobile -----------------------------------------------------------------------------
 @media screen and (max-width: 800px) {
+
+     .nav-bottom {
+        width: 720px;
+    }
     #container {
         padding: 0;
         margin-top: 0%;
     }
 
-
-    //menu de navegacion
     .header-web {
-        // width: 100%;
-        // z-index: 3;
-        // position: relative;
-        // top: 0%;
-        // margin: 0;
-        // margin-left: 0;
-        .menu{
+        .menu {
             // position: absolute;
             width: 90%;
         }
@@ -1541,6 +1533,71 @@ input.whats-input[type=text]:focus {
 
 
     }
+    .flexslider {
+        height: 30.25rem;
+    }
+
+    .flexslider ul img {
+        height: 30.25rem;
+    }
+
+    .flex-direction-nav a {
+        top: 40%;
+    }
+
+  
+
+    .caption-slider {
+        margin: 0 0 0 25%;
+
+        h1,
+        strong {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 15px;
+
+        }
+    }
+
+    .caption-slider-beige {
+        margin: 0 0 0 40%;
+
+        h1,
+        strong {
+            font-size: 40px;
+        }
+
+        p {
+            font-size: 15px;
+
+        }
+    }
+    .projects-container {
+        padding: 4% 10%;
+
+        
+    }
+   
+
+    
+
+    .caption {
+        width: 70%;
+        height: 90%;
+        margin: 5% 0 0 15%;
+
+    }
+
+    .section-contact .contact-box-first .form-contact-single .send-email {
+        width: 28%;
+    }
+   
+}
+
+
+@media screen and (max-width: 500px) {
 
     // flexslider principal
 
@@ -1551,13 +1608,14 @@ input.whats-input[type=text]:focus {
     .flexslider ul img {
         height: 20.25rem;
     }
+
     .flex-direction-nav a {
         top: 40%;
     }
 
     .flexslider .flex-control-nav.flex-control-paging {
         bottom: 170px;
-        display: none;
+       
     }
 
     .caption-slider {
@@ -1698,6 +1756,7 @@ input.whats-input[type=text]:focus {
         }
 
         .carousel-contenedor {
+
             .anterior-carousel,
             .siguiente-carousel {
 
@@ -1740,9 +1799,7 @@ input.whats-input[type=text]:focus {
 
     }
 
-    .sliderComments .flex-control-nav.flex-control-paging {
-        bottom: -450%;
-    }
+   
 
     .caption {
         width: 90%;
@@ -1832,3 +1889,4 @@ input.whats-input[type=text]:focus {
 
 
 }
+

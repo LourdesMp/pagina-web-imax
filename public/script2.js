@@ -1,3 +1,5 @@
+// const e = require("express");
+
 popupWhatsApp = () => {
   
   let btnClosePopup = document.querySelector('.closePopup');
@@ -5,16 +7,19 @@ popupWhatsApp = () => {
   let popup = document.querySelector('.popup-whatsapp');
   let sendBtn = document.getElementById('send-btn');
 
-  btnClosePopup.addEventListener("click",  () => {
+  btnClosePopup.addEventListener("click",  (e) => {
+    e.preventDefault()
     popup.classList.toggle('is-active-whatsapp-popup')
   })
   
-  btnOpenPopup.addEventListener("click",  () => {
+  btnOpenPopup.addEventListener("click",  (e) => {
+    e.preventDefault()
     popup.classList.toggle('is-active-whatsapp-popup')
      popup.style.animation = "fadeIn .6s 0.0s both";
   })
   
-  sendBtn.addEventListener("click", () => {
+  sendBtn.addEventListener("click", (e) => {
+    e.preventDefault()
   let msg = document.getElementById('whats-in').value;
   let relmsg = msg.replace(/ /g,"%20");
      
