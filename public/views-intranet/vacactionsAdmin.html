@@ -7,14 +7,14 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-storage.js"></script>
+    <script src="https://raw.githack.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
     <link rel="stylesheet" href="../styles/style.css">
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>noticias</title>
 </head>
-<body class="container-pagos">
+<body class="container-admin">
 
-    <header class="header-intranet-pagos">   
+    <header class="header-intranet-admin">   
         <nav class="menu">
             <img class="logo" src="../assets/logo.png">
             <ul>
@@ -27,7 +27,7 @@
                </a> </li>
                <li><a href="vacations.html">Mis Vacaciones</a></li>
               
-                <div class="only-admin"></div>
+               <div class="only-admin"></div>
             
                 <a class="logOut"><li>Cerrar sesión</li></a>
                
@@ -37,39 +37,42 @@
 
     </header>
 
-    <main class="box-boletas">
+    <main class="box-admin-boletas">
         <section class="container-boletas">
             <div class="title-new">
-                <p>Mis Constancias CTS</p>
+                <p>Solicitudes de Vacaciones</p>
                 <div class="user-new">
                    
                 </div>
             </div>
-            <div class="box-search">
-                <div>
-                    <p>Filtro de Busqueda</p>
-                    <label for="search">Por Año:</label>
-                    <input type="text" name="search" class="search" >
-                    
+            <div class="box-filter-vacation">
+                <p class="title-filter">Lista de Solicitudes de Vacaciones</p>
+                <div class="search-filter">
+                    <p>Filtro de Búsqueda</p>
+                    <div class="detailed-search">
+                        <label for="search">Por Colaborador:</label>
+                        <input type="text" name="search" class="search">
+                     
+                    </div>
                 </div>
-                <div class="note">
-                    <p>*Estimado usuario, una vez vizualizada tu constancia CTS, por favor dar click en la conformidad.</p>
-                </div>
-                
             </div>
-            <div class="box-table">
+            <div class="box-table-vacations">
                 <table style="width:100%">
                     <tr>
+                      <th>Colaborador</th>
                       <th>Fecha</th>
-                      <th>Total de Haberes</th>
-                      <th>Constancias CTS</th>
-                      <th>Conformidad</th>
+                      <th>Area</th>
+                      <th>Detalles</th>
+                      <th>Solicitud</th>
                     </tr>
-                    <tbody class="table-cts">
+                    <tbody class="table-vacation-lider" >
 
-                    </tbody>                    
+                    </tbody>                            
                   </table>
             </div>
+
+        
+            
         </section>
 
     </main>
@@ -85,15 +88,13 @@
         measurementId: "G-P8W33C2X62"
     };
     firebase.initializeApp(firebaseConfig);
-    console.log(firebase.name)
     const auth = firebase.auth();
     const fs = firebase.firestore();
-    firebase.storage();
     firebase.analytics();
     </script>
 
   
-    <script src="../web-controller/nav.js"></script>  
-    <script src="../web-controller/cts.js"></script>
+    <script src="../controller-intranet/nav.js"></script>  
+    <script src="../controller-intranet/vacationAdmin.js"></script>  
 </body>
 </html>

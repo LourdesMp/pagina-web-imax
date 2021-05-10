@@ -10,7 +10,7 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-storage.js"></script>
     <link rel="stylesheet" href="../styles/style.css">
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <title>Boletas Admin</title>
+    <title>CTS Admin</title>
 </head>
 <body class="container-admin">
 
@@ -26,7 +26,7 @@
                         </ul>
                </a> </li>
                <li><a href="vacations.html">Mis Vacaciones</a></li>
-               
+
                <div class="only-admin"></div>
               
                 <a class="logOut"><li>Cerrar sesión</li></a>
@@ -40,7 +40,7 @@
     <main class="box-admin-boletas">
         <section class="container-boletas">
             <div class="title-new">
-                <p>Ingresar Boletas de Pago</p>
+                <p>Ingresar Constancias CTS</p>
                 <div class="user-new">
                    
                 </div>
@@ -51,83 +51,70 @@
                     <div class="box-search">
                         <div class="search-name">
                             <div>
-                                <label for="name">Nombre del Colaborador:</label>
-                                <select name="name" class="nameWorkers select-modal" required >
-                                    <!-- <option value="Pepito Castillo Luna">Pepito Castillo Luna</option>
+                                <label for="nameWorkerCts">Nombre del Colaborador:</label>
+                                <select name="name" class="nameWorkersCts select-modal" required >
+                                    <option value="Pepito Castillo Luna">Pepito Castillo Luna</option>
                                     <option value="Laura Catillo Luna">Laura Catillo Luna </option>
-                                    <option value="Pepito Castillo Luna">Pepito Castillo Luna</option> -->
+                                    <option value="Pepito Castillo Luna">Pepito Castillo Luna</option>
                                 </select>
                             </div>
-                           
                             <div class="space">
                                 <label for="year">Año: </label>
                                 <input type="text" name="year" class="year" required>
                             </div>
+                           
                         </div>
     
                         <div class="search-second">
                             <div> 
-                                <label for="month">Mes:</label>
-                                <select name="month" class="month select-modal " required >
-                                    <option value="Enero">Enero</option>
-                                    <option value="Febrero">Febrero</option>
-                                    <option value="Marzo">Marzo</option>
-                                    <option value="Abril">Abril</option>
+                                <label for="month-Cts">Mes:</label>
+                                <select name="month-Cts" class="month-Cts select-modal " required >
                                     <option value="Mayo">Mayo</option>
-                                    <option value="Junio">Junio</option>
-                                    <option value="Julio">Julio</option>
-                                    <option value="JulioGrat">Julio-Gratificación</option>
-                                    <option value="Agosto">Agosto</option>
-                                    <option value="Setiembre">Setiembre</option>
-                                    <option value="Octubre">Octubre</option>
                                     <option value="Noviembre">Noviembre</option>
-                                    <option value="Diciembre">Diciembre</option>
-                                    <option value="DiciembreGrat">Diciembre-Gratificación</option>
                                 </select>
                             </div>
                             <div>
-                                <label for="totalPage">Total Pagado s/.: </label>
-                                <input type="number" name="totalPage"  class="totalPage" required>
+                                <label for="page-cts">Total Pagado s/.: </label>
+                                <input type="number" name="page-cts"  class="page-cts" required>
                             </div>
                             <div>
-                                <label for="addTicked">Adjuntar Boleta <i class="fas fa-paperclip"></i></label>
-                                <input type="file" id="addImageCts" accept ="application/pdf" class= "addTicked">
+                                <label for="addImgCts">Adjuntar Constancia <i class="fas fa-paperclip"></i></label>
+                                <input type="file" id="addImage" accept ="application/pdf" class= "addImgCts">
                                
                             </div>
                         </div>
                     </div>
-                    <button type="submit" class="btn-generar-boleta">Generar</button>
+                    <button type="submit" class="btn-generar-cts">Generar</button>
                 </form>   
-                <div class="reg_error_inner" id="reg_error_inner"></div>
             </div>
 
             <div class="box-search-filter">
-                <p class="title-filter">Boletas de Pago publicadas</p>
+                <p class="title-filter">Constancias CTS publicadas</p>
                 <div class="search-filter">
                     <p>Filtro de Búsqueda</p>
                     <div class="detailed-search">
-                        <label for="searchName">Por Colaborador:</label>
-                        <input type="text" name="searchName" class="searchName">
+                        <label for="searchNameCts">Por Colaborador:</label>
+                        <input type="text" name="searchNameCts" class="searchNameCts">
                     
-                        <label for="searchMonth">Por Mes:</label>
-                        <input type="text" name="searchMonth" class="searchMonth"> 
+                        <label for="searchMonthCts">Por Mes:</label>
+                        <input type="text" name="searchMonthCts" class="searchMonthCts">   
                     </div>
                 </div>
             </div>
             
             <div class="box-table">
-                <table style="width:100%" >
+                <table style="width:100%">
                     <tr>
-                        <th>Colaborador</th>
-                        <th>Mes</th>
-                        <!-- <th>Total</th> -->
-                        <th>Boleta de Pago</th>
-                        <th>Conformidad</th>
-                        <th>Opciones</th>
+                      <th>Colaborador</th>
+                      <th>Mes</th>
+                      <th>Constancias CTS</th>
+                      <th>Conformidad</th>
+                      <th>Opciones</th>
                     </tr>
-                    <tbody class="table-page">
-                    </tbody>
-                </table>
+                    <tbody class="table-cts">
+
+                    </tbody>                 
+                  </table>
             </div>
         </section>
 
@@ -152,7 +139,7 @@
     </script>
 
   
-    <script src="../web-controller/nav.js"></script>  
-    <script src="../web-controller/boletasAdmin.js"></script>
+    <script src="../controller-intranet/nav.js"></script>  
+    <script src="../controller-intranet/ctsAdmin.js"></script> 
 </body>
 </html>

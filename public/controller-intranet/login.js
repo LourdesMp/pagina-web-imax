@@ -12,7 +12,7 @@ login.addEventListener('submit', (e) => {
       .then(userCredential => {
         login.reset();
         console.log('ingresasteeeee');
-        location.href="web-views/noticias.html"
+        location.href="views-intranet/noticias.html"
       }).catch((error)=>{
         const errorCode = error.code;
         const errorMessage = error.message;

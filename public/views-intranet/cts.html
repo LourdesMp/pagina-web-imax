@@ -12,9 +12,9 @@
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>noticias</title>
 </head>
-<body class="container-admin">
+<body class="container-pagos">
 
-    <header class="header-intranet-admin">   
+    <header class="header-intranet-pagos">   
         <nav class="menu">
             <img class="logo" src="../assets/logo.png">
             <ul>
@@ -27,8 +27,8 @@
                </a> </li>
                <li><a href="vacations.html">Mis Vacaciones</a></li>
               
-               <div class="only-admin"></div>
-         
+                <div class="only-admin"></div>
+            
                 <a class="logOut"><li>Cerrar sesión</li></a>
                
             </ul>
@@ -37,47 +37,39 @@
 
     </header>
 
-    <main class="box-admin-boletas">
+    <main class="box-boletas">
         <section class="container-boletas">
             <div class="title-new">
-                <p>Solicitudes de Vacaciones</p>
+                <p>Mis Constancias CTS</p>
                 <div class="user-new">
                    
                 </div>
             </div>
-            <div class="box-filter-vacation">
-                <p class="title-filter">Lista de Solicitudes de Vacaciones</p>
-                <div class="search-filter">
-                    <p>Filtro de Búsqueda</p>
-                    <div class="detailed-search">
-                        <label for="search">Por Colaborador:</label>
-                        <input type="text" name="search" class="search"> 
-                    </div>
+            <div class="box-search">
+                <div>
+                    <p>Filtro de Busqueda</p>
+                    <label for="search">Por Año:</label>
+                    <input type="text" name="search" class="search" >
+                    
                 </div>
+                <div class="note">
+                    <p>*Estimado usuario, una vez vizualizada tu constancia CTS, por favor dar click en la conformidad.</p>
+                </div>
+                
             </div>
-            <div class="box-table-vacations">
+            <div class="box-table">
                 <table style="width:100%">
                     <tr>
-                      <th>Colaborador</th>
                       <th>Fecha</th>
-                      <th>Detalles</th>
+                      <th>Total de Haberes</th>
+                      <th>Constancias CTS</th>
                       <th>Conformidad</th>
                     </tr>
-                    <tbody class="table-vacation" >
+                    <tbody class="table-cts">
 
-                    </tbody>
-                    <!-- <tr>
-                      <td>Pepito Castillo Luna</td>  
-                      <td>10/10/2020 al 20/10/2020</td>
-                      <td>Pendientes: 15 días <br>
-                          Vencen: 31/12/2021</td>
-                      <td><input type="checkbox" id="cbox2" value="conformidad">  </td>
-                    </tr>      -->
+                    </tbody>                    
                   </table>
             </div>
-
-        
-            
         </section>
 
     </main>
@@ -101,7 +93,7 @@
     </script>
 
   
-    <script src="../web-controller/nav.js"></script>  
-    <script src="../web-controller/vacationLider.js"></script>  
+    <script src="../controller-intranet/nav.js"></script>  
+    <script src="../controller-intranet/cts.js"></script>
 </body>
 </html>

@@ -8,17 +8,18 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-storage.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.0/jspdf.umd.min.js"></script>
     <link rel="stylesheet" href="../styles/style.css">
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>noticias</title>
 </head>
-<body class="container-noticias">
+<body class="container-pagos">
 
-    <header class="header-intranet">   
+    <header class="header-intranet-pagos">   
         <nav class="menu">
             <img class="logo" src="../assets/logo.png">
             <ul>
-                <li><a href="#/">Noticias</a></li>
+                <li><a href="noticias.html">Noticias</a></li>
                 <li><a href="#/" class="pagos">Mis Pagos
                         <ul class="nav-home hide">
                             <a href="boletas.html" ><li class="btn-go-boletas second-parent" >Mis Boletas de Pago</li></a>
@@ -26,10 +27,10 @@
                         </ul>
                </a> </li>
                <li><a href="vacations.html">Mis Vacaciones</a></li>
-               
+              
                <div class="only-admin"></div>
-               
-               <a class="logOut"><li>Cerrar sesión</li></a>
+              
+                <a class="logOut"><li>Cerrar sesión</li></a>
                
             </ul>
         </nav>
@@ -37,55 +38,21 @@
 
     </header>
 
-    <main class="box-noticias">
-        <div class="column-noticias">
-
-            <div class="title-noticias">
-                <p class="big-title">Noticias IMAX</p>
+    <main class="box-boletas">
+        <section class="container-vacations">
+            <div class="title-new">
+                <p>Mis Vacaciones</p>
                 <div class="user-new">
                    
                 </div>
+            </div >
+
+            <div class="templateDoc">
+
             </div>
-    
-            <section class="create-post">
+      
             
-                <div class="writePost">
-                    <textarea id="newPublication" class="textarea" rows="10" cols="50" placeholder="¿Qué quisieras compartir?"></textarea>
-                </div>
-                <div class="box-publicar">
-                    <div class="progress">
-                        <div class="containerProgress hide">
-                            <!-- <progress value= "0" max= "100" id="uploader">0%</progress> -->
-                            <div class="progressline"></div>
-                        </div>
-                        <input type="file" id="addImage" accept ="image/*" class= "addImg"> 
-                        <label for= "addImage" style= 'font-size: 20px'>
-                            <i class="fas fa-camera"></i>
-                        </label> <br>
-                        <div class="hide divImg">
-                            <span class="deleteImg">❌</span>
-                            <img class="picPost"/>
-                        </div>
-                    </div>
-                    
-                    <button id="btnNewPublication" class="btnNewPost">Publicar</button>
-                </div>
-                
-                
-            </section>
-    
-    
-            <section class="container-post">
-                    <!-- <ul class="posts">
-                      
-                    </ul> -->
-            </section>
-
-        </div>
-        
-
-
-
+        </section>
 
     </main>
     
@@ -107,10 +74,9 @@
     firebase.analytics();
     </script>
 
-    <script  type="module" src="../web-controller/posts.js"></script>  
-    <script type="module" src="../web-controller/nav.js"></script>  
-
-    
-   
+  
+    <script src="../controller-intranet/nav.js"></script> 
+    <!-- <script src="../web-controller/vacation.js"></script>  -->
+    <script src="../controller-intranet/template.js"></script> 
 </body>
 </html>

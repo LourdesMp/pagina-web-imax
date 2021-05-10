@@ -8,14 +8,13 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-storage.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.3.0/jspdf.umd.min.js"></script>
     <link rel="stylesheet" href="../styles/style.css">
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>noticias</title>
 </head>
-<body class="container-pagos">
+<body class="container-admin">
 
-    <header class="header-intranet-pagos">   
+    <header class="header-intranet-admin">   
         <nav class="menu">
             <img class="logo" src="../assets/logo.png">
             <ul>
@@ -29,7 +28,7 @@
                <li><a href="vacations.html">Mis Vacaciones</a></li>
               
                <div class="only-admin"></div>
-              
+         
                 <a class="logOut"><li>Cerrar sesión</li></a>
                
             </ul>
@@ -38,19 +37,46 @@
 
     </header>
 
-    <main class="box-boletas">
-        <section class="container-vacations">
+    <main class="box-admin-boletas">
+        <section class="container-boletas">
             <div class="title-new">
-                <p>Mis Vacaciones</p>
+                <p>Solicitudes de Vacaciones</p>
                 <div class="user-new">
                    
                 </div>
-            </div >
-
-            <div class="templateDoc">
-
             </div>
-      
+            <div class="box-filter-vacation">
+                <p class="title-filter">Lista de Solicitudes de Vacaciones</p>
+                <div class="search-filter">
+                    <p>Filtro de Búsqueda</p>
+                    <div class="detailed-search">
+                        <label for="search">Por Colaborador:</label>
+                        <input type="text" name="search" class="search"> 
+                    </div>
+                </div>
+            </div>
+            <div class="box-table-vacations">
+                <table style="width:100%">
+                    <tr>
+                      <th>Colaborador</th>
+                      <th>Fecha</th>
+                      <th>Detalles</th>
+                      <th>Conformidad</th>
+                    </tr>
+                    <tbody class="table-vacation" >
+
+                    </tbody>
+                    <!-- <tr>
+                      <td>Pepito Castillo Luna</td>  
+                      <td>10/10/2020 al 20/10/2020</td>
+                      <td>Pendientes: 15 días <br>
+                          Vencen: 31/12/2021</td>
+                      <td><input type="checkbox" id="cbox2" value="conformidad">  </td>
+                    </tr>      -->
+                  </table>
+            </div>
+
+        
             
         </section>
 
@@ -75,8 +101,7 @@
     </script>
 
   
-    <script src="../web-controller/nav.js"></script> 
-    <!-- <script src="../web-controller/vacation.js"></script>  -->
-    <script src="../web-controller/template.js"></script> 
+    <script src="../controller-intranet/nav.js"></script>  
+    <script src="../controller-intranet/vacationLider.js"></script>  
 </body>
 </html>
