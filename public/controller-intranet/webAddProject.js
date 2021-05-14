@@ -1,13 +1,4 @@
-const saveProjects = (
-  nombre,
-  servicio,
-  description,
-  urlCarrusel,
-  urlProject,
-  checkProjectHome,
-  content,
-  useruid
-) => {
+const saveProjects = (nombre,servicio,description,urlCarrusel,urlProject,checkProjectHome,content,useruid) => {
   return fs.collection("projects").add({
     nombre,
     servicio,

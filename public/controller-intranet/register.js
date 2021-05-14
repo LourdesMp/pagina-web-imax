@@ -178,23 +178,21 @@ window.addEventListener('DOMContentLoaded', async(e) => {
       user.id = doc.id;
       const users = firebase.auth().currentUser;
       userContainer.innerHTML +=  `
-                                <tr class="row-users" contenteditable="false" data-id="${user.id}">
-                                  <td data-id="${user.id}" class="nameUser"> ${user.name}</td>  
-                                  <td data-id="${user.id}" class="dniUser">${user.dni}</td>
-                                  <td data-id="${user.id}" class="phoneUser">${user.phone}</td>
-                                  <td data-id="${user.id}" class="emailUser">${user.email}</td>  
-                                  <td data-id="${user.id}" class="areaUser">${user.area}</td>  
-                                  <td data-id="${user.id}" class="leaderUser">${user.leader}</td>
-                                  <td data-id="${user.id}" class="fechaUser">${user.entryDay}</td>  
-                                  <td data-id="${user.id}" class="salarioAdminUser">${user.salarioAdmin}</td>
-                                  <td><a href=${user.urlfirmRegister} download="Boleta.pdf"><button><i class="fas fa-download"></i>Descargar</button></a></td>
-                                  <td data-id="${user.id}" class="checkUser">${user.checkAdmin}</td>
-                                  <td data-id="${user.id}" class="checkLider">${user.checkLider}</td>
-                                  <td><i data-id="${user.id}" class="btn-editUser fas fa-edit"></i> <button data-id="${user.id}" class="btnSaveFile" id="btnSaveFile">💾</button> <i class="btn-delUser fas fa-trash-alt" data-id="${user.id}" data-name="${user.name}"></i></td>
-                                </tr>  
-
-                                
-                             `;
+                        <tr class="row-users" contenteditable="false" data-id="${user.id}">
+                          <td data-id="${user.id}" class="nameUser"> ${user.name}</td>  
+                          <td data-id="${user.id}" class="dniUser">${user.dni}</td>
+                          <td data-id="${user.id}" class="phoneUser">${user.phone}</td>
+                          <td data-id="${user.id}" class="emailUser">${user.email}</td>  
+                          <td data-id="${user.id}" class="areaUser">${user.area}</td>  
+                          <td data-id="${user.id}" class="leaderUser">${user.leader}</td>
+                          <td data-id="${user.id}" class="fechaUser">${user.entryDay}</td>  
+                          <td data-id="${user.id}" class="salarioAdminUser">${user.salarioAdmin}</td>
+                          <td><a href=${user.urlfirmRegister} download="Boleta.pdf"><button><i class="fas fa-download"></i>Descargar</button></a></td>
+                          <td data-id="${user.id}" class="checkUser">${user.checkAdmin}</td>
+                          <td data-id="${user.id}" class="checkLider">${user.checkLider}</td>
+                          <td><i data-id="${user.id}" class="btn-editUser fas fa-edit"></i> <button data-id="${user.id}" class="btnSaveFile" id="btnSaveFile">💾</button> <i class="btn-delUser fas fa-trash-alt" data-id="${user.id}" data-name="${user.name}"></i></td>
+                        </tr>  
+                      `;
 
                             
                   const deleteUser = document.querySelectorAll('.btn-delUser');
