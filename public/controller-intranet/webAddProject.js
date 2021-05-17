@@ -130,7 +130,7 @@ generateProject.addEventListener("submit", (event) => {
   console.log(description);
   const checkProjectHome = document.querySelector(".checkProjectHome").value;
   console.log(checkProjectHome);
-  const content = document.querySelector(".textarea").value;
+  const content = document.querySelector(".newPublication").value;
   console.log(content);
   if (urlProject && urlCarrusel) {
     saveProjects(

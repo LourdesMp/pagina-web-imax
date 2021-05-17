@@ -25,4 +25,37 @@ new Glider(simpleCarousel, {
         prev: '.anterior-carousel',
         next: '.siguiente-carousel'
     }
-})
+});
+
+// const onGetProjects = (callback) => fs.collection("projects").onSnapshot(callback);
+
+// const projectContainer = document.querySelector(".carousel-lista");
+// window.addEventListener("DOMContentLoaded", async (e) => {
+//     onGetProjects((querySnapshot) => {
+//         projectContainer.innerHTML = "";
+//         querySnapshot.forEach((doc) => {
+//             const project = doc.data();
+//             console.log(project)
+//             project.id = doc.id;
+//             const user = firebase.auth().currentUser;
+//             projectContainer.innerHTML += `
+//                    <div class="carousel-element">
+        
+//                                 <figure>
+//                                     <img src="${project.urlCarrusel}" alt="">
+//                                     <!-- <a href="aaa"></a> -->
+//                                     <div class="capa">
+//                                         <img class="boton_mas" src="./assets/iconos/image.png" alt="">
+//                                     </div>
+//                                 </figure>
+
+//                                 <div>
+//                                     <h1>${project.servicio}: ${project.nombre}</h1>
+//                                     <p>${project.description}</p>
+//                                 </div>
+//                             </div>
+                      
+//      `;
+//         })
+//       })
+//     })
