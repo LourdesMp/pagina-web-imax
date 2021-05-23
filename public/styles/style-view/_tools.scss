@@ -257,10 +257,11 @@
 .container-single-notice {
     display: flex;
     padding: 2% 10%;
+   
 
     .box-noticia-content {
         width: 80%;
-
+      
         figure {
             position: relative;
             width: 100%;
@@ -292,11 +293,17 @@
         }
     }
 
-    .minibox-gallery-notice {
+    
+}
+
+.minibox-gallery-notice {
         width: 20%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: absolute;
+        top: 40%;
+        left: 75%;
 
 
         .box-notice {
@@ -367,7 +374,6 @@
 
 
     }
-}
 
 @media screen and (max-width: 500px) {
     .notice-web-container {

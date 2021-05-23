@@ -25,7 +25,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
             </div>`;
 
             let linkIndicador = "";
-       
+
             const galleryNoticeWeb = document.querySelector(".gallery-notice-web");
             const singleArticle = document.querySelector(".single-article");
             console.log(singleArticle)
@@ -37,55 +37,78 @@ window.addEventListener("DOMContentLoaded", async (e) => {
                     linkIndicador = e.target.dataset.id;
 
                     console.log("haaaaaaa");
-                      onGetArticles((querySnapshot) => {
+                    onGetArticles((querySnapshot) => {
                         singleArticle.innerHTML = "";
                         querySnapshot.forEach((doc) => {
-                          const article = doc.data();
-                          article.id = doc.id;
-                          const user = firebase.auth().currentUser;
-                          console.log(article.id);
-                          console.log(linkIndicador);
+                            const article = doc.data();
+                            article.id = doc.id;
+                            const user = firebase.auth().currentUser;
+                            console.log(article.id);
+                            console.log(linkIndicador);
 
-                          if (article.id === linkIndicador) {
-                            singleArticle.classList.toggle("show");
-                            galleryNoticeWeb.classList.remove("show");
-                            galleryNoticeWeb.classList.toggle("hide");
-                            console.log("click");
-                            singleArticle.innerHTML += `
+                            if (article.id === linkIndicador) {
+                                singleArticle.classList.toggle("show");
+                                galleryNoticeWeb.classList.remove("show");
+                                galleryNoticeWeb.classList.toggle("hide");
+                                console.log("click");
+                                singleArticle.innerHTML += `
 
                                     <div class="head-article">
-                <h1>${article.nameArticle}</h1>
-                <div><i class="fas fa-long-arrow-alt-left"></i> <a href="./galleryNews.html">Volver</a></div>
-            </div>
-            <div class="container-single-notice">
-                <div class="box-noticia-content">
-                    <figure>
-                        <img src="${article.urlArticle}" alt="">
-                        <p class="title-single-notice">${article.nameArticle}</p>
-                    </figure>
-                    <p class="news-content">${article.contentArticle}</p>
-                </div>
-                <div class="minibox-gallery-notice">
-                    <div class="box-notice">
-                        <figure>
-                            <img src="./assets/noticias/coronavirus.jpg" alt="">
-                            <div class="capa-notice">
-                                <div class="detail-notice">
-                                    <h1 class="title-notice">Titular de noticia</h1>
-                                    <p>Ut mi tellus, lacinia ut mattis sit amet, auctor non nibh.
-                                        Vestibulum varius diam nulla, sed pharetra sem dictum id.</p>
-                                    <a class="view-more" href="newsSingle.html">Ver más</a>
-                                </div>
+                            <h1>${article.nameArticle}</h1>
+                            <div><i class="fas fa-long-arrow-alt-left"></i> <a href="./galleryNews.html">Volver</a></div>
                             </div>
-                        </figure>
-                    </div>
+                            <div class="container-single-notice">
+                                <div class="box-noticia-content">
+                                    <figure>
+                                        <img src="${article.urlArticle}" alt="">
+                                        <p class="title-single-notice">${article.nameArticle}</p>
+                                    </figure>
+                                    <p class="news-content">${article.contentArticle}</p>
+                                </div>
+                                
+                            </div>`;
 
-                  
-                </div>
-            </div>`;
-                          }
+                                const contentApp = document.querySelectorAll(".container-single-notice")
+                                console.log(contentApp)
+
+                                const miniGallery = document.createElement("div");
+                                miniGallery.classList = "minibox-gallery-notice";
+
+
+
+
+                                onGetArticles((querySnapshot) => {
+                                    miniGallery.innerHTML = "";
+                                    querySnapshot.forEach((doc) => {
+                                        const article = doc.data();
+                                        article.id = doc.id;
+                                        miniGallery.innerHTML += `<div class="box-notice">
+                                    <figure>
+                                        <img src="${article.urlArticle}" alt="">
+                                        <div class="capa-notice">
+                                            <div class="detail-notice">
+                                                <h1 class="title-notice">${article.nameArticle}</h1>
+                                                <p>${article.descriptionArticle}</p>
+                                                <a class="view-more" href="./galleryNews.html">Ver más</a>
+                                            </div>
+                                        </div>
+                                    </figure>
+                                </div>`
+                                    })
+                                })
+                                singleArticle.appendChild(miniGallery)
+
+
+
+
+                            }
                         });
-                      });
+
+
+                    });
+
+
+
                 });
             });
         });

@@ -11,13 +11,13 @@ window.addEventListener("DOMContentLoaded", async (e) => {
             const user = firebase.auth().currentUser;
             projectContainer.innerHTML += `
             
-      <div class="square">
+            <div class="square">
                     <figure>
                         <img class="img-carrusel" src=${project.urlCarrusel} alt="">
                         <div class="capa-detailed">
                             <div class="capa1">
                                 <div class="capa-icon"><button ><i data-id="${project.id}"class="link-project fas fa-link"></i></button></div>
-                                <div class="capa-icon" ><a href=""><i class="fas fa-search-plus"></i></a></div>
+                                <div class="capa-icon" ><button ><i data-id="${project.id}"class="link-img-project fas fa-search-plus"></i></button></div>
                                 
                             </div>
                             <div class="capa2">
@@ -76,30 +76,69 @@ window.addEventListener("DOMContentLoaded", async (e) => {
                 });
             });
 
+       
 
-            const btnsRemove = document.querySelectorAll(".btnRemove");
-            btnsRemove.forEach((btn) => {
-                btn.addEventListener("click", async (e) => {
-                    const r = confirm("¿Quieres eliminar esta noticia?");
-                    if (r == true) {
-                        await deletePost(e.target.dataset.id);
+            // document.querySelectorAll(".square").forEach((el) => {
+            //     el.addEventListener("click", function (ev) {
+            //         ev.stopPropagation();
+            //       this.classList.add("active");
+            //     });
+            // });
+            // document.querySelectorAll(".square").forEach((el) => {
+            //   el.addEventListener("click", function (ev) {
+            //     this.classList.remove("active");
+            //   });
+            // });
+
+            let linkIndicadorImg = "";
+            
+
+            const projectSingleImg = document.querySelector(".single-project-img");
+            console.log(projectSingleImg);
+            const linksProjectImg = document.querySelectorAll(".link-img-project");
+            console.log(linksProjectImg);
+            linksProjectImg.forEach((btn) => {
+              btn.addEventListener("click", async (e) => {
+                console.log(e.target.dataset.id);
+                linkIndicadorImg = e.target.dataset.id;
+
+                console.log("haaaaaaa");
+                onGetProjects((querySnapshot) => {
+                  projectSingleImg.innerHTML = "";
+                  querySnapshot.forEach((doc) => {
+                    const project = doc.data();
+                    project.id = doc.id;
+                    const user = firebase.auth().currentUser;
+                    console.log(project.id);
+                    console.log(linkIndicadorImg);
+
+                    if (project.id === linkIndicadorImg) {
+                      projectSingleImg.classList.toggle("show");
+                    //   galleryProjectsContainer.classList.remove("show");
+                    //   galleryProjectsContainer.classList.toggle("hide");
+                      console.log("click");
+                      projectSingleImg.innerHTML += `
+
+                                    <div class="head-project">
+                                                <h1>${project.nombre} (${project.servicio})</h1>
+                                                <div><i class="fas fa-long-arrow-alt-left"></i> <a href="./proyectos.html">Volver</a></div>
+                                    </div>
+                                    <div class="box-img"><img src="${project.urlProject}" alt=""></div>
+
+                                    <div class="text-project">
+                                        <p>${project.content}
+                                        </p>
+                                    </div>`;
                     }
+                  });
                 });
+              });
             });
+            
+           
 
-            const btnsEdit = document.querySelectorAll(".btnEdit");
-            btnsEdit.forEach((btn) => {
-                btn.addEventListener("click", async (e) => {
-                    const doc = await getPostEdit(e.target.dataset.id);
-                    console.log(doc.data());
-                    const post = doc.data();
-                    editStatus = true;
-                    id = doc.id;
-                    const inputTextArea = document.querySelector(".textarea");
-                    inputTextArea.value = post.content;
-                    btnNewPost.innerHTML = "Actualizar";
-                });
-            });
+
+           
         });
     });
 });
