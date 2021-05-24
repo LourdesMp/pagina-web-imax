@@ -93,6 +93,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
                                             </div>
                                         </div>
                                     </figure>
+                                    
                                 </div>`
                                     })
                                 })

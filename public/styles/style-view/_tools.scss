@@ -222,6 +222,8 @@
 
 // vista noticia web individual
 .single-article {
+    width: auto;
+    position: relative;
 
     .head-article {
         width: 100%;
@@ -302,8 +304,10 @@
         flex-direction: column;
         align-items: center;
         position: absolute;
-        top: 40%;
+        top: 12.5%;
         left: 75%;
+        height: auto;
+     
 
 
         .box-notice {
