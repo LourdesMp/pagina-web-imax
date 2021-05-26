@@ -127,25 +127,25 @@ window.addEventListener("DOMContentLoaded", async (e) => {
                                          <img src="${project.urlCarrusel}" alt="">
 
                                     `;
- modelProject.addEventListener('click', () => {
-                                  modelProject.classList.remove("active")
-                                   modelProject.classList.add("hide")
+                                    modelProject.addEventListener('click', () => {
+                                    modelProject.classList.remove("active")
+                                    modelProject.classList.add("hide")
                                 })
 
                             }
-            
+
                         });
-                        
+
                     });
-                    
+
                 });
-                
+
             });
-                         
+
 
             galleryProjectsContainer.appendChild(modelProject)
 
-              
+
 
 
 
@@ -154,5 +154,3 @@ window.addEventListener("DOMContentLoaded", async (e) => {
         });
     });
 });
-
-    
