@@ -22,7 +22,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
                             </div>
                             <div class="capa2">
                                 <p class="title-project">${project.nombre}</p>
-                                <p>Tasación</p>
+                                <p>${project.servicio}</p>
                    
                             </div>
                         </div>
@@ -76,7 +76,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
                 });
             });
 
-       
+
 
             // document.querySelectorAll(".square").forEach((el) => {
             //     el.addEventListener("click", function (ev) {
@@ -90,55 +90,69 @@ window.addEventListener("DOMContentLoaded", async (e) => {
             //   });
             // });
 
-            let linkIndicadorImg = "";
-            
 
-            const projectSingleImg = document.querySelector(".single-project-img");
-            console.log(projectSingleImg);
+            const modelProject = document.createElement("div");
+            modelProject.classList = "model-project";
+
+            let linkIndicadorImg = "";
+            // const projectSingleImg = document.querySelector(".single-project-img");
+            // console.log(projectSingleImg);
             const linksProjectImg = document.querySelectorAll(".link-img-project");
             console.log(linksProjectImg);
             linksProjectImg.forEach((btn) => {
-              btn.addEventListener("click", async (e) => {
-                console.log(e.target.dataset.id);
-                linkIndicadorImg = e.target.dataset.id;
+                btn.addEventListener("click", async (e) => {
+                    console.log(e.target.dataset.id);
+                    linkIndicadorImg = e.target.dataset.id;
 
-                console.log("haaaaaaa");
-                onGetProjects((querySnapshot) => {
-                  projectSingleImg.innerHTML = "";
-                  querySnapshot.forEach((doc) => {
-                    const project = doc.data();
-                    project.id = doc.id;
-                    const user = firebase.auth().currentUser;
-                    console.log(project.id);
-                    console.log(linkIndicadorImg);
+                    console.log("haaaaaaa");
+                    onGetProjects((querySnapshot) => {
+                        modelProject.innerHTML = "";
+                        modelProject.classList.add("active")
+                        querySnapshot.forEach((doc) => {
+                            const project = doc.data();
+                            project.id = doc.id;
+                            const user = firebase.auth().currentUser;
+                            console.log(project.id);
+                            console.log(linkIndicadorImg);
 
-                    if (project.id === linkIndicadorImg) {
-                      projectSingleImg.classList.toggle("show");
-                    //   galleryProjectsContainer.classList.remove("show");
-                    //   galleryProjectsContainer.classList.toggle("hide");
-                      console.log("click");
-                      projectSingleImg.innerHTML += `
+                            if (project.id === linkIndicadorImg) {
+                                //   modelProject.classList.toggle("show");
+                                //   galleryProjectsContainer.classList.remove("show");
+                                //   galleryProjectsContainer.classList.toggle("hide");
+                                console.log("click");
+                                modelProject.innerHTML += `
 
-                                    <div class="head-project">
-                                                <h1>${project.nombre} (${project.servicio})</h1>
-                                                <div><i class="fas fa-long-arrow-alt-left"></i> <a href="./proyectos.html">Volver</a></div>
-                                    </div>
-                                    <div class="box-img"><img src="${project.urlProject}" alt=""></div>
+                                    
+                                        
+                                         <img src="${project.urlCarrusel}" alt="">
 
-                                    <div class="text-project">
-                                        <p>${project.content}
-                                        </p>
-                                    </div>`;
-                    }
-                  });
-                });
-              });
-            });
+                                    `;
+ modelProject.addEventListener('click', () => {
+                                  modelProject.classList.remove("active")
+                                   modelProject.classList.add("hide")
+                                })
+
+                            }
             
-           
+                        });
+                        
+                    });
+                    
+                });
+                
+            });
+                         
+
+            galleryProjectsContainer.appendChild(modelProject)
+
+              
 
 
-           
+
+
+
         });
     });
 });
+
+    
