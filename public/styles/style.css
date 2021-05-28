@@ -494,8 +494,8 @@
 .box-contact-form-date .box-number-contact .mini-date .date-number-email .mini-box-line .line2 {
   position: absolute;
   width: 3%;
-  top: 108%;
-  left: 5.3%;
+  top: 111%;
+  left: 5%;
 }
 
 .box-contact-form-date .box-number-contact .mini-date .date-number-email .mini-box-icon p,
@@ -4155,6 +4155,10 @@ strong {
 .section-contact .contact-box-first .form-contact-single .send-email:hover {
   -webkit-box-shadow: 0 0 0 1px white, 0 0 0 0px, 0 2px 3px;
           box-shadow: 0 0 0 1px white, 0 0 0 0px, 0 2px 3px;
+}
+
+.section-contact .contact-box-first .form-contact-single .success {
+  color: white;
 }
 
 .float {

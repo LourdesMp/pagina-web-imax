@@ -16,9 +16,9 @@ window.addEventListener('DOMContentLoaded', async(e) => {
       if (cts.idWorkerCts === userLogueado.uid) {
         ctsContainer.innerHTML +=  `
         <tr class ="monthCts">
-        <td>${cts.monthCts} - ${cts.year}</td>
+        <td>${cts.monthCts} - ${cts.yearCts}</td>
         <td>${cts.pageCts}</td>
-        <td><a href=${cts.urlBoleta} download="Boleta.pdf"><button><i class="fas fa-download"></i> Descargar</button></a></td>
+        <td><a href=${cts.urlCts} download="Cts.pdf"><button><i class="fas fa-download"></i> Descargar</button></a></td>
         <td>${cts.confirmacion === true ? `<input type="checkbox" class="conformidad" value= ${cts.confirmacion}  name="conformidad" data-id="${cts.id}" disabled="disabled"  checked >` : 
         `<input type="checkbox" class="conformidad" value= ${cts.confirmacion}  name="conformidad"  data-id="${cts.id}" > `} </td>
       </tr>`;

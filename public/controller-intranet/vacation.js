@@ -80,13 +80,13 @@ vacationExpire.innerHTML = '',
                 console.log(año)
                 let mes = fecha.getMonth();
                 if (fecha.getMonth() < 10) {
-                    mes = `0${fecha.getMonth()+1}`
+                    mes = `${fecha.getMonth()+1}`
                 } else {
                     mes = `${fecha.getMonth()+1}`
                 }
                 let dia = fecha.getDate();
                 if (fecha.getDate() < 10) {
-                    dia = `0${fecha.getDate()}`
+                    dia = `${fecha.getDate()}`
                 } else {
                     dia = `${fecha.getDate()}`
                 }
@@ -108,13 +108,13 @@ vacationExpire.innerHTML = '',
                     console.log(año)
                     let mes = fecha.getMonth();
                     if (fecha.getMonth() < 10) {
-                        mes = `0${fecha.getMonth()+1}`
+                        mes = `${fecha.getMonth()+1}`
                     } else {
                         mes = `${fecha.getMonth()+1}`
                     }
                     let dia = fecha.getDate();
                     if (fecha.getDate() < 10) {
-                        dia = `0${fecha.getDate()}`
+                        dia = `${fecha.getDate()}`
                     } else {
                         dia = `${fecha.getDate()}`
                     }
@@ -328,13 +328,13 @@ fs.collection('vacation').onSnapshot((querySnapshot) => {
                                 <div class= "box-boleta-pdf"> 
                                 <img class="firma-pdf" src="../assets/logo.png">
                                 <h1>Solicitud de vacaciones</h1>
-                                <p class="body-doc">Mediante la presente me dirijo a usted para solicitar
-                                con anticipacion los días de vacaciones correspondientes a este año, desde ${vacation.startOfVacation} 
+                                <p class="body-doc">Mediante la presente me dirijo a usted, para solicitar
+                                con anticipación los días de vacaciones correspondientes a este año, desde ${vacation.startOfVacation} 
                                 al ${vacation.endOfVacation}
                                 por ser mi derecho </p>
 
                                 <p class="body-doc"> Agradeciendo su atencion y esperando que no exista inconveniente por 
-                                su parte, quedo a la espera de su contestacion </p>
+                                su parte, quedo a la espera de su contestación </p>
 
                                 <p class="body-doc"> Le saluda atentamente ${vacation.nameWorker}</p>
                                 
