@@ -435,6 +435,7 @@
 .box-contact-form-date .box-number-contact {
   width: 40%;
   padding: 5% 5% 15% 5%;
+  position: relative;
 }
 
 .box-contact-form-date .box-number-contact h1 {
@@ -1065,7 +1066,8 @@
           justify-content: center;
 }
 
-.container-login .box-login .login-form, .container-login .box-login .box-fill-data {
+.container-login .box-login .login-form,
+.container-login .box-login .box-fill-data {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1085,12 +1087,14 @@
   padding: 25px 0;
 }
 
-.container-login .box-login .login-form .logo-login, .container-login .box-login .box-fill-data .logo-login {
+.container-login .box-login .login-form .logo-login,
+.container-login .box-login .box-fill-data .logo-login {
   width: 45%;
   margin: 4%;
 }
 
-.container-login .box-login .login-form .box-input, .container-login .box-login .box-fill-data .box-input {
+.container-login .box-login .login-form .box-input,
+.container-login .box-login .box-fill-data .box-input {
   margin: 20px;
   height: 45px;
   width: 70%;
@@ -1103,7 +1107,14 @@
           align-items: flex-end;
 }
 
-.container-login .box-login .login-form .box-input .emailLogin, .container-login .box-login .login-form .box-input .passwordLogin, .container-login .box-login .login-form .box-input .email-Register, .container-login .box-login .login-form .box-input .password-Register, .container-login .box-login .box-fill-data .box-input .emailLogin, .container-login .box-login .box-fill-data .box-input .passwordLogin, .container-login .box-login .box-fill-data .box-input .email-Register, .container-login .box-login .box-fill-data .box-input .password-Register {
+.container-login .box-login .login-form .box-input .emailLogin,
+.container-login .box-login .login-form .box-input .passwordLogin,
+.container-login .box-login .login-form .box-input .email-Register,
+.container-login .box-login .login-form .box-input .password-Register,
+.container-login .box-login .box-fill-data .box-input .emailLogin,
+.container-login .box-login .box-fill-data .box-input .passwordLogin,
+.container-login .box-login .box-fill-data .box-input .email-Register,
+.container-login .box-login .box-fill-data .box-input .password-Register {
   color: black;
   font-size: 1.1rem;
   background-color: transparent;
@@ -1114,13 +1125,15 @@
   outline: none;
 }
 
-.container-login .box-login .login-form .box-input .user-icon, .container-login .box-login .box-fill-data .box-input .user-icon {
+.container-login .box-login .login-form .box-input .user-icon,
+.container-login .box-login .box-fill-data .box-input .user-icon {
   font-size: 1.3rem;
   color: #868686;
   margin: 10px;
 }
 
-.container-login .box-login .login-form .btn-login, .container-login .box-login .box-fill-data .btn-login {
+.container-login .box-login .login-form .btn-login,
+.container-login .box-login .box-fill-data .btn-login {
   color: #ffffff;
   font-size: 1.2rem;
   font-weight: 700;
@@ -1133,7 +1146,8 @@
   outline: none;
 }
 
-.container-login .box-login .login-form .login-google, .container-login .box-login .box-fill-data .login-google {
+.container-login .box-login .login-form .login-google,
+.container-login .box-login .box-fill-data .login-google {
   margin-top: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1150,10 +1164,21 @@
           justify-content: center;
 }
 
-.container-login .box-login .login-form .login-google .google-icon, .container-login .box-login .box-fill-data .login-google .google-icon {
+.container-login .box-login .login-form .login-google .google-icon,
+.container-login .box-login .box-fill-data .login-google .google-icon {
   font-size: 1.3rem;
   color: #868686;
   margin: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .container-login .box-login .login-form {
+    width: 80%;
+  }
+  .container-login .box-login
+.box-fill-data {
+    width: 80%;
+  }
 }
 
 * {
@@ -4748,6 +4773,10 @@ input.whats-input[type=text]:focus {
   .informative-data .detailed-information-on .image-detailed {
     width: 30%;
   }
+  .informative-data .detailed-information .image-detailed img,
+  .informative-data .detailed-information-on .image-detailed img {
+    width: 70%;
+  }
   .services-container .service-list {
     width: 90%;
     margin-bottom: 10%;
@@ -4821,6 +4850,9 @@ input.whats-input[type=text]:focus {
   .projects-container .carousel-contenedor .carousel-element figure {
     height: 80%;
   }
+  .projects-container .carousel-contenedor .carousel-element div p {
+    display: none;
+  }
   .sliderComments .comment-title h1 {
     font-size: 30px;
   }
@@ -4858,7 +4890,7 @@ input.whats-input[type=text]:focus {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 90px;
+    height: 120px;
     margin-top: 0%;
   }
   .section-contact .contact-box-first .form-contact-single .box-tex-form input {

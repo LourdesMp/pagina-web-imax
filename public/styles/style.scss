@@ -1671,6 +1671,9 @@ input.whats-input[type=text]:focus {
 
             .image-detailed {
                 width: 30%;
+                img{
+                    width: 70%;
+                }
             }
         }
     }
@@ -1786,6 +1789,10 @@ input.whats-input[type=text]:focus {
                 height: 80%;
             }
 
+            .carousel-element div p {
+                display: none;
+            }
+
         }
     }
 
@@ -1838,7 +1845,7 @@ input.whats-input[type=text]:focus {
 
             .box-tex-form {
                 flex-direction: column;
-                height: 90px;
+                height: 120px;
                 margin-top: 0%;
 
                 input {
