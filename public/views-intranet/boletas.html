@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,31 +10,41 @@
     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-storage.js"></script>
     <link rel="stylesheet" href="../styles/style.css">
-     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <title>noticias</title>
 </head>
+
 <body class="container-pagos">
 
-    <header class="header-intranet-pagos">   
+    <header class="header-intranet-pagos">
         <nav class="menu">
             <img class="logo" src="../assets/logo.png">
             <ul>
                 <li><a href="noticias.html">Noticias</a></li>
                 <li><a href="#/" class="pagos">Mis Pagos
                         <ul class="nav-home hide">
-                            <a href="boletas.html" ><li class="btn-go-boletas second-parent" >Mis Boletas de Pago</li></a>
-                            <a href="cts.html" ><li class="btn-go-const second-parent" >Mis Constancias CTS</li></a>
+                            <a href="boletas.html">
+                                <li class="btn-go-boletas second-parent">Mis Boletas de Pago</li>
+                            </a>
+                            <a href="cts.html">
+                                <li class="btn-go-const second-parent">Mis Constancias CTS</li>
+                            </a>
                         </ul>
-               </a> </li>
-               <li><a href="vacations.html">Mis Vacaciones</a></li>
-              
+                    </a> </li>
+                <li><a href="vacations.html">Mis Vacaciones</a></li>
+
                 <div class="only-admin"></div>
-               
-                <a class="logOut"><li>Cerrar sesión</li></a>
-               
+                <div class="only-marketing"></div>
+                <div class="only-lider"></div>
+
+                <a class="logOut">
+                    <li>Cerrar sesión</li>
+                </a>
+
             </ul>
         </nav>
-        
+
 
     </header>
 
@@ -42,59 +53,61 @@
             <div class="title-new">
                 <p>Mis boletas de pago</p>
                 <div class="user-new">
-                   
+
                 </div>
             </div>
             <div class="box-search">
                 <div>
                     <p>Filtro de Busqueda</p>
                     <label for="search">Por Mes:</label>
-                    <input type="search" name="search" class="search" >
-                    
+                    <input type="search" name="search" class="search">
+
                 </div>
                 <div class="note">
-                    <p>*Estimado usuario, una vez vizualizada su boleta de pago, por favor dar click en la conformidad.</p>
+                    <p>*Estimado usuario, una vez vizualizada su boleta de pago, por favor dar click en la conformidad.
+                    </p>
                 </div>
-                
+
             </div>
             <div class="box-table">
                 <table style="width:100%">
                     <tr>
-                      <th>Mes</th>
-                      <th>Total de Haberes</th>
-                      <th>Boleta de Pago</th>
-                      <th>Conformidad</th>
+                        <th>Mes</th>
+                        <th>Total de Haberes</th>
+                        <th>Boleta de Pago</th>
+                        <th>Conformidad</th>
                     </tr>
                     <tbody class="table-page">
                     </tbody>
-                      
-                     
-                  </table>
+
+
+                </table>
             </div>
         </section>
 
     </main>
-    
+
     <script>
         const firebaseConfig = {
-        apiKey: "AIzaSyAPvuYSkfkOfaRObLXvtDiZjVoQGYDIacc",
-        authDomain: "web-imax.firebaseapp.com",
-        projectId: "web-imax",
-        storageBucket: "web-imax.appspot.com",
-        messagingSenderId: "114819498377",
-        appId: "1:114819498377:web:02e7671a7255f711cf6158",
-        measurementId: "G-P8W33C2X62"
-    };
-    firebase.initializeApp(firebaseConfig);
-    console.log(firebase.name)
-    const auth = firebase.auth();
-    const fs = firebase.firestore();
-    firebase.storage();
-    firebase.analytics();
+            apiKey: "AIzaSyAPvuYSkfkOfaRObLXvtDiZjVoQGYDIacc",
+            authDomain: "web-imax.firebaseapp.com",
+            projectId: "web-imax",
+            storageBucket: "web-imax.appspot.com",
+            messagingSenderId: "114819498377",
+            appId: "1:114819498377:web:02e7671a7255f711cf6158",
+            measurementId: "G-P8W33C2X62"
+        };
+        firebase.initializeApp(firebaseConfig);
+        console.log(firebase.name)
+        const auth = firebase.auth();
+        const fs = firebase.firestore();
+        firebase.storage();
+        firebase.analytics();
     </script>
 
-  
-    <script src="../controller-intranet/nav.js"></script>  
+
+    <script src="../controller-intranet/nav.js"></script>
     <script src="../controller-intranet/boletas.js"> </script>
 </body>
+
 </html>
