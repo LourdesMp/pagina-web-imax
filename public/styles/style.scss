@@ -60,6 +60,8 @@
     .menu {
         display: flex;
         position: absolute;
+        width: 100%;
+        justify-content: space-between;
     }
 
     .nav-bar {
@@ -70,7 +72,7 @@
     .logo {
         margin-left: 5%;
         margin-top: 2%;
-        width: 13%;
+        width: auto;
         height: 55px;
         display: block;
 
@@ -271,7 +273,7 @@
     width: 100%;
     // max-width: 1000px;
     height: 41.25rem;
-position: relative;
+    position: relative;
     display: flex;
     flex-direction: column;
 
@@ -699,7 +701,7 @@ strong {
             margin-top: 2%;
             width: 100%;
             height: 450px;
-display: flex;
+            display: flex;
             color: #4c4c4c;
         }
 
@@ -720,11 +722,11 @@ display: flex;
         .carousel-element {
             text-align: center;
             color: #4c4c4c;
-  
 
-          
 
-             figure {
+
+
+            figure {
                 position: relative;
                 width: 100%;
                 height: 75%;
@@ -749,7 +751,7 @@ display: flex;
                     text-align: center;
 
                     .boton_mas {
-                        margin-top: 45%;
+                        margin-top: 50%;
                         width: 22%;
                         height: 20%;
                         color: white;
@@ -784,9 +786,12 @@ display: flex;
 
     }
 
-    .carousel-indicadores .glider-dot {
-        display: none;
-    }
+    
+
+        .glider-dot {
+            display: none;
+        }
+    
 
 }
 
@@ -856,8 +861,8 @@ display: flex;
 
             a {
                 display: block;
-                width: 10px;
-                height: 10px;
+                width: 12px;
+                height: 12px;
                 background: #ffffff;
                 text-indent: -9999px;
                 border-radius: 50%;
@@ -1101,7 +1106,7 @@ display: flex;
                     0 2px 3px;
             }
 
-            .success{
+            .success {
                 color: white;
             }
         }
@@ -1246,7 +1251,7 @@ display: flex;
     .popup-whatsapp p {
         font-size: 0.9em;
     }
-   
+
 }
 
 .popup-whatsapp>.content-whatsapp.-top {
@@ -1405,6 +1410,11 @@ input.whats-input[type=text]:focus {
                 margin-right: 3%;
             }
 
+            a{
+                text-decoration: none;
+                color: white;
+            }
+
 
         }
 
@@ -1487,9 +1497,10 @@ input.whats-input[type=text]:focus {
 // style mobile -----------------------------------------------------------------------------
 @media screen and (max-width: 800px) {
 
-     .nav-bottom {
+    .nav-bottom {
         width: 720px;
     }
+
     #container {
         padding: 0;
         margin-top: 0%;
@@ -1540,6 +1551,7 @@ input.whats-input[type=text]:focus {
 
 
     }
+
     .flexslider {
         height: 30.25rem;
     }
@@ -1552,7 +1564,7 @@ input.whats-input[type=text]:focus {
         top: 40%;
     }
 
-  
+
 
     .caption-slider {
         margin: 0 0 0 25%;
@@ -1581,14 +1593,15 @@ input.whats-input[type=text]:focus {
 
         }
     }
+
     .projects-container {
         padding: 4% 10%;
 
-        
-    }
-   
 
-    
+    }
+
+
+
 
     .caption {
         width: 70%;
@@ -1600,7 +1613,7 @@ input.whats-input[type=text]:focus {
     .section-contact .contact-box-first .form-contact-single .send-email {
         width: 28%;
     }
-   
+
 }
 
 
@@ -1622,7 +1635,7 @@ input.whats-input[type=text]:focus {
 
     .flexslider .flex-control-nav.flex-control-paging {
         display: none;
-       
+
     }
 
     .caption-slider {
@@ -1671,7 +1684,8 @@ input.whats-input[type=text]:focus {
 
             .image-detailed {
                 width: 30%;
-                img{
+
+                img {
                     width: 70%;
                 }
             }
@@ -1788,12 +1802,20 @@ input.whats-input[type=text]:focus {
 
             .carousel-element figure {
                 height: 70%;
+
+                .capa .boton_mas {
+                    margin-top: 80%;
+                }
             }
 
             .carousel-element div p {
                 display: none;
             }
 
+        }
+
+        .glider-dot {
+            display: block;
         }
     }
 
@@ -1814,7 +1836,7 @@ input.whats-input[type=text]:focus {
 
     }
 
-   
+
 
     .caption {
         width: 90%;
@@ -1876,13 +1898,15 @@ input.whats-input[type=text]:focus {
         }
 
         .abstract,
-        .box-contac-date{
-             width: 80%;
-             margin-bottom: 5%;
-             div img {
-                 width: 15%;
-             }
+        .box-contac-date {
+            width: 80%;
+            margin-bottom: 5%;
+
+            div img {
+                width: 15%;
+            }
         }
+
         .box-contac-redes {
             width: 80%;
 
@@ -1911,4 +1935,3 @@ input.whats-input[type=text]:focus {
 
 
 }
-
