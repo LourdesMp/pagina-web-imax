@@ -1400,7 +1400,7 @@ input.whats-input[type=text]:focus {
             margin-bottom: 2%;
 
             img {
-                width: 7%;
+                width: 8%;
                 height: 3%;
                 margin-right: 3%;
             }
@@ -1424,11 +1424,11 @@ input.whats-input[type=text]:focus {
             a {
 
                 width: 10%;
-                height: 30px;
+                // height: 30px;
                 margin-left: 1%;
 
                 img {
-                    width: 90%;
+                    width: 100%;
 
                 }
             }
@@ -1621,7 +1621,7 @@ input.whats-input[type=text]:focus {
     }
 
     .flexslider .flex-control-nav.flex-control-paging {
-        bottom: 20px;
+        display: none;
        
     }
 
@@ -1751,7 +1751,7 @@ input.whats-input[type=text]:focus {
     // sección ultimos proyectos
 
     .projects-container {
-        padding: 4% 20%;
+        padding: 4% 5%;
 
         .projects-title {
             h1 {
@@ -1769,24 +1769,25 @@ input.whats-input[type=text]:focus {
 
             .anterior-carousel,
             .siguiente-carousel {
+                display: none;
 
-                width: 10px;
-                height: 10px;
-                top: calc(50% - 125px);
-                line-height: 10px;
+                // width: 10px;
+                // height: 10px;
+                // top: calc(50% - 125px);
+                // line-height: 10px;
 
 
-                img {
-                    width: 20px;
-                }
+                // img {
+                //     width: 20px;
+                // }
             }
 
             .carousel-lista {
-                height: 500px;
+                height: 400px;
             }
 
             .carousel-element figure {
-                height: 80%;
+                height: 70%;
             }
 
             .carousel-element div p {
@@ -1875,12 +1876,19 @@ input.whats-input[type=text]:focus {
         }
 
         .abstract,
-        .box-contac-date,
+        .box-contac-date{
+             width: 80%;
+             margin-bottom: 5%;
+             div img {
+                 width: 15%;
+             }
+        }
         .box-contac-redes {
             width: 80%;
 
             .redes-icons a {
-                width: 18%;
+                width: 15%;
+                margin-right: 5%;
 
             }
 

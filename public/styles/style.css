@@ -294,21 +294,23 @@
   display: block;
   text-decoration: none;
   padding-top: 7%;
-  font-size: 15px;
+  font-size: 18px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  line-height: 15px;
 }
 
 .servicios-container .box-par .square figure .capa-detailed .capa1 a .quotationService {
   background-color: #009AD2;
-  height: 20px;
+  height: 30px;
   width: 40%;
   border-radius: 25px;
   padding-left: 2%;
+  padding-top: 2%;
 }
 
 .servicios-container .box-par .square figure:hover > .capa-detailed {
@@ -406,14 +408,18 @@
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-top: 5%;
   }
   .servicios-container .box-par .square {
     height: 90vh;
-    width: 90%;
-    margin-bottom: 15px;
+    width: 80%;
+    margin-bottom: 10%;
   }
   .servicios-container .box-par .square figure .capa-detailed .capa1 {
-    margin-top: 50%;
+    margin-top: 70%;
+  }
+  .servicios-container .box-par .square figure .capa-detailed .capa1 a .quotationService {
+    height: 30px;
   }
 }
 
@@ -651,6 +657,10 @@
           flex-direction: column;
 }
 
+.projects-gallery-container .description-project {
+  display: none;
+}
+
 .projects-gallery-container .box-par {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -851,7 +861,7 @@
 
 .single-project .box-img {
   width: 100%;
-  height: 80vh;
+  height: 100%;
 }
 
 .single-project .box-img img {
@@ -974,7 +984,7 @@
 
 .single-project .service-container .box-btn-service .btn-service {
   background-color: #009AD2;
-  height: 25px;
+  height: 35px;
   width: 140px;
   border-radius: 15px;
   outline: none;
@@ -983,6 +993,7 @@
   color: white;
   font-size: 18px;
   margin-bottom: 5%;
+  padding-top: 5px;
   padding-left: 10px;
   text-decoration: none;
 }
@@ -995,7 +1006,7 @@
 @media screen and (max-width: 500px) {
   .single-project .box-img-service {
     width: 100%;
-    height: 40vh;
+    height: 100%;
   }
   .single-project .head-project h1 {
     font-size: 20px;
@@ -1023,7 +1034,17 @@
   .single-project .box-img {
     height: 60vh;
   }
+  .projects-gallery-container .description-project {
+    display: block;
+    background: #eaeaea;
+    color: #474747;
+    padding: 20px;
+    text-align: justify;
+  }
   .projects-gallery-container .box-par .square {
+    width: 100%;
+  }
+  .projects-gallery-container .model-project.active img {
     width: 100%;
   }
 }
@@ -2906,6 +2927,35 @@
   padding: 1% 4%;
 }
 
+.tools-container .add-proyect-container .generate-project .containerProgress,
+.tools-container .add-proyect-container .generate-article .containerProgress,
+.tools-container .add-article-container .generate-project .containerProgress,
+.tools-container .add-article-container .generate-article .containerProgress {
+  width: 50%;
+  height: 15px;
+  margin: 1% 0 2%;
+  background-color: #c3bdbd;
+  border-radius: 8px;
+}
+
+.tools-container .add-proyect-container .generate-project .containerProgress .progresslineCarrusel, .tools-container .add-proyect-container .generate-project .containerProgress .progressline,
+.tools-container .add-proyect-container .generate-article .containerProgress .progresslineCarrusel,
+.tools-container .add-proyect-container .generate-article .containerProgress .progressline,
+.tools-container .add-article-container .generate-project .containerProgress .progresslineCarrusel,
+.tools-container .add-article-container .generate-project .containerProgress .progressline,
+.tools-container .add-article-container .generate-article .containerProgress .progresslineCarrusel,
+.tools-container .add-article-container .generate-article .containerProgress .progressline {
+  width: 0%;
+  height: 15px;
+  background-color: #fc5414;
+  text-align: center;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0 6%;
+}
+
 .tools-container .add-proyect-container .generate-project label,
 .tools-container .add-proyect-container .generate-article label,
 .tools-container .add-article-container .generate-project label,
@@ -4567,7 +4617,7 @@ input.whats-input[type=text]:focus {
 }
 
 .contact-box-second .box-contac-date div img {
-  width: 7%;
+  width: 8%;
   height: 3%;
   margin-right: 3%;
 }
@@ -4587,12 +4637,11 @@ input.whats-input[type=text]:focus {
 
 .contact-box-second .box-contac-redes .redes-icons a {
   width: 10%;
-  height: 30px;
   margin-left: 1%;
 }
 
 .contact-box-second .box-contac-redes .redes-icons a img {
-  width: 90%;
+  width: 100%;
 }
 
 .contact-box-second .box-contac-redes .link-intranet {
@@ -4729,7 +4778,7 @@ input.whats-input[type=text]:focus {
     top: 40%;
   }
   .flexslider .flex-control-nav.flex-control-paging {
-    bottom: 20px;
+    display: none;
   }
   .caption-slider {
     margin: 0 0 0 25%;
@@ -4823,7 +4872,7 @@ input.whats-input[type=text]:focus {
     font-size: 10px;
   }
   .projects-container {
-    padding: 4% 20%;
+    padding: 4% 5%;
   }
   .projects-container .projects-title h1 {
     font-size: 20px;
@@ -4835,20 +4884,13 @@ input.whats-input[type=text]:focus {
   }
   .projects-container .carousel-contenedor .anterior-carousel,
   .projects-container .carousel-contenedor .siguiente-carousel {
-    width: 10px;
-    height: 10px;
-    top: calc(50% - 125px);
-    line-height: 10px;
-  }
-  .projects-container .carousel-contenedor .anterior-carousel img,
-  .projects-container .carousel-contenedor .siguiente-carousel img {
-    width: 20px;
+    display: none;
   }
   .projects-container .carousel-contenedor .carousel-lista {
-    height: 500px;
+    height: 400px;
   }
   .projects-container .carousel-contenedor .carousel-element figure {
-    height: 80%;
+    height: 70%;
   }
   .projects-container .carousel-contenedor .carousel-element div p {
     display: none;
@@ -4916,17 +4958,21 @@ input.whats-input[type=text]:focus {
     font-size: 15px;
   }
   .contact-box-second .abstract,
-  .contact-box-second .box-contac-date,
+  .contact-box-second .box-contac-date {
+    width: 80%;
+    margin-bottom: 5%;
+  }
+  .contact-box-second .abstract div img,
+  .contact-box-second .box-contac-date div img {
+    width: 15%;
+  }
   .contact-box-second .box-contac-redes {
     width: 80%;
   }
-  .contact-box-second .abstract .redes-icons a,
-  .contact-box-second .box-contac-date .redes-icons a,
   .contact-box-second .box-contac-redes .redes-icons a {
-    width: 18%;
+    width: 15%;
+    margin-right: 5%;
   }
-  .contact-box-second .abstract .link-intranet,
-  .contact-box-second .box-contac-date .link-intranet,
   .contact-box-second .box-contac-redes .link-intranet {
     margin: 30px 0;
   }

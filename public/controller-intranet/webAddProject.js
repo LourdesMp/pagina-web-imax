@@ -33,9 +33,7 @@ if (btnImgCarrusel) {
         (snapshot) => {
           const percent =
             (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          const progressCarrusel = document.querySelector(
-            ".progresslineCarrusel"
-          );
+          const progressCarrusel = document.querySelector(".progresslineCarrusel");
           progressCarrusel.parentNode.classList.add("show");
           progressCarrusel.innerText = `${percent.toFixed(0)}%`;
           progressCarrusel.style.width = `${percent}%`;
@@ -47,6 +45,10 @@ if (btnImgCarrusel) {
             urlCarrusel = downloadURL;
             sessionStorage.setItem("imgCarrusel", urlCarrusel);
           });
+            setTimeout(() => {
+            const progressCarrusel = document.querySelector(".progresslineCarrusel");
+            progressCarrusel.parentNode.classList.remove("show");
+          }, 2500);
         }
       );
     }
