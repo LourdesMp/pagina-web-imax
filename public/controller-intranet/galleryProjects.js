@@ -78,17 +78,6 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
 
 
-            // document.querySelectorAll(".square").forEach((el) => {
-            //     el.addEventListener("click", function (ev) {
-            //         ev.stopPropagation();
-            //       this.classList.add("active");
-            //     });
-            // });
-            // document.querySelectorAll(".square").forEach((el) => {
-            //   el.addEventListener("click", function (ev) {
-            //     this.classList.remove("active");
-            //   });
-            // });
 
 
             const modelProject = document.createElement("div");

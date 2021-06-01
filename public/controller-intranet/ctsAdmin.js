@@ -180,19 +180,6 @@ window.addEventListener('DOMContentLoaded', async(e) => {
       })
     });
 
-                  // const btnsEdit = document.querySelectorAll('.btnEdit');
-                  // btnsEdit.forEach((btn) => {
-                  //   btn.addEventListener('click', async(e) => {
-                  //    const doc = await getPostEdit(e.target.dataset.id)
-                  //    console.log(doc.data())
-                  //    const post = doc.data();
-                  //    editStatus = true;
-                  //    id = doc.id;
-                  //    const inputTextArea = document.querySelector ('.textarea');
-                  //    inputTextArea.value = post.content;
-                  //    btnNewPost.innerHTML = 'Actualizar'
-                  //   })
-                  // });
 
                   const btnsEdit = document.querySelectorAll('.btnEdit');
                   btnsEdit.forEach(btn => {

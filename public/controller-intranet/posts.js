@@ -216,59 +216,6 @@ window.addEventListener('DOMContentLoaded', async(e) => {
   }
 
 
-//prueba 
-
-
-
-
-// const editPost = (id, content) => fs.collection('posts').doc(id).update({ content });
-// const deletePost = id => fs.collection('posts').doc(id).delete(); 
-
-// const postsList = document.querySelector('.posts');
-// const setupPosts = data => {
-//     if (data.length) {
-//         let posts = '';
-//         const user = firebase.auth().currentUser;
-//         data.forEach(doc=> {
-//             const post = doc.data();
-//             console.log(post)
-//             const li = `
-//             <div>
-//               <div class="postHeader">
-//                   <div class="user-info">
-//                     <div class= "dateUser">
-//                       <p id="nameUser"> Publicado por: ${post.email}</p>
-//                       <time datetime="date">${post.date} </time>
-//                     </div>
-//                   </div>
-//                   ${(user.uid === post.useruid) ? `
-//                   <div class="option-edit-post">
-//                     <span>...</span>
-//                       <ul class="optionPost"> 
-//                         <li class="btnEdit">Editar</li>
-//                         <li class="btnRemove">Eliminar</li>
-//                       </ul>
-//                   </div>  ` : ''}      
-//               </div>
-//               <div class= "editPostOption">
-//                 <div class="contentPost">
-//                   <p contenteditable="false" id="editPost" >${post.content}</p>
-//                   ${post.url ? `<img id="photoPost" src="${post.url}">` : ''}
-//                 </div>
-//                 <button class="hide" hidden id="btnSave">💾</button>
-//                 <button class="hide" hidden id="btnCancel">✖️</button>
-//               </div>
-//             </div>`;
-
-//             posts += li;
-//         });
-
-//         postsList.innerHTML= posts;
-//     } else {
-//         postsList.innerHTML= `<p>No existen post en este momento</p>`;
-//     }
-// }
-
 // firebase.auth().onAuthStateChanged(user => {
 //     if (user) {
 //       fs.collection('posts')

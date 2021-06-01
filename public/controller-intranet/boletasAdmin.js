@@ -230,40 +230,10 @@ window.addEventListener('DOMContentLoaded', async (e) => {
         })
       });
 
-      // const filterPageWorker = (data, texto) => {
-      //   const longNameWorker = texto.length;
-      //   // const dataName =  fs.collection('users').get().then((snapshot) => {console.log(snapshot.docs);
-      //   //     // setupPosts(snapshot.docs)
-      //   // });
-      //   const dataName = page.nameWorker;
-      //   const filterName = dataName.filter((worker) => (
-      //     texto === dataName.toLowerCase().substring(0, longNameWorker)
-      //   ));
-      //   return filterName; // retornamos el array de objetos encontrados
-      // };
-
-      // const searchName = document.querySelector('.searchName');
-      // searchName.addEventListener('input', (evt) => {
-      //   const texto = evt.target.value.toLowerCase(); // extraemos el valor de la caja de texto
-      //   console.log(texto)
-      //   const filtroNameWorker = filterPageWorker(page, texto);
-      // });
+      
     });
   });
 });
 
 
 
-// firebase.auth().onAuthStateChanged(user => {
-//     if (user) {
-//       fs.collection('users')
-//       .get()
-//       .then((snapshot) => {
-//           console.log(snapshot.docs);
-//           setupPosts(snapshot.docs)
-//       })
-//     } else {
-//       console.log('auth: sign out');
-//       setupPosts([])
-//     }
-// });

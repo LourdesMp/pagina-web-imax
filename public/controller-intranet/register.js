@@ -102,55 +102,7 @@ register.addEventListener('submit', (e) => {
 })    
 
 
-// register.addEventListener('submit', (e) => {
-//   e.preventDefault();
-//   const name = document.querySelector('.name-register').value;
-//   const checkAdmin = document.querySelector('.checkAdmin').value;
-//   const dni = document.querySelector('.dni-register').value;
-//   const phone= document.querySelector('.phone-register').value;
-//   const email = document.querySelector('.email-register').value;
-//   const password = document.querySelector('.password-register').value;
-//   const area = document.querySelector('.area-register').value;
-//   const leader = document.querySelector('.leader-register').value;
-//   const entryDay = document.querySelector('.fechaAdmin').value;
-//   const salarioAdmin= document.querySelector('.salarioAdmin-register').value;
-//   const urlfirmRegister = sessionStorage.getItem('firmRegister');
-//   const checkLider = document.querySelector('.checkLider').value;
-//   console.log(name, checkAdmin, dni, phone, email, password, area,leader,entryDay,salarioAdmin,urlfirmRegister,checkLider)
-  
-//   firebase.auth().createUserWithEmailAndPassword(email,  password)
-//   .then(userCredential => {
-//     const db = firebase.firestore();
-//       return db.collection('users').doc(userCredential.user.uid).set({
-//         name, 
-//         checkAdmin,
-//         dni, 
-//         phone, 
-//         email, 
-//         password, 
-//         area,
-//         leader,
-//         entryDay,
-//         salarioAdmin,
-//         urlfirmRegister,
-//         checkLider
-//       });
-     
-//   }).then(() => {
-//     register.reset();
-//     alert('Se agregó un nuevo colaborador'); 
-//   })
-//   .catch((error) => {
-//     const errorCode = error.code;
-//     const errorMessage = error.message;
-//     if (errorCode === 'auth/weak-password') {
-//       document.querySelector('#reg_error_inner').innerHTML = 'La contraseña es demasiado débil. Utlice letras y números';
-//     } else {
-//       document.querySelector('#reg_error_inner').innerHTML = errorMessage;
-//     }
-//   });
 
-// });
 
 // PARA MOSTRAR DATOS EN LA TABLA DE BOLETAS
 const onGetUsers = (callback) => firebase.firestore().collection('users').onSnapshot(callback);

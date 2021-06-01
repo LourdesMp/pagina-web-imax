@@ -53,25 +53,6 @@
    });
  }
 
- 
-//  const delFileStorage = (file) =>
-//    firebase
-//      .storage()
-//      .ref()
-//      .child(`postImage/${currentUser().email}/${file.name}`)
-//      .delete();
-
-//  const btnDeleteImg = document.querySelector(".deleteImg");
-//  console.log(btnDeleteImg);
-//  if (btnDeleteImg) {
-//    btnDeleteImg.addEventListener("click", () => {
-//      const objFile = sessionStorage.getItem("imgNewPost");
-//      delFileStorage(objFile);
-//      sessionStorage.removeItem("imgNewPost");
-//      btnDeleteImg.parentNode.classList.add("hide");
-//    });
-//  }
-
  const generateArticle = document.querySelector(".generate-article");
 
  //  const progress = document.querySelector(".progressline");
