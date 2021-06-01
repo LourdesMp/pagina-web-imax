@@ -13,6 +13,7 @@
  };
 
  let fileArticle;
+ const currentUser = () => firebase.auth().currentUser;
  const btnImgArticle = document.querySelector("#addImgArticle");
  if (btnImgArticle) {
    btnImgArticle.addEventListener("change", (e) => {
