@@ -344,6 +344,9 @@
     font-size: 1.5rem;
     width: 100%;
   }
+  .header-nosotros .nav-bar img {
+    width: 5%;
+  }
   .header-nosotros .menu-list {
     list-style: none;
     padding: 0;
@@ -362,7 +365,7 @@
     text-decoration: none;
     font-size: 20px;
   }
-  .header-nosotros .logo {
+  .header-nosotros .box-logo {
     display: none;
   }
   .header-nosotros .mostrar {
@@ -4728,6 +4731,9 @@ input.whats-input[type=text]:focus {
     cursor: pointer;
     font-size: 1.2rem;
     width: 100%;
+  }
+  .header-web .nav-bar img {
+    width: 5%;
   }
   .header-web .menu-list {
     list-style: none;
