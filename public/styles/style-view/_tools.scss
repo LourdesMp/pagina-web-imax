@@ -263,14 +263,12 @@
 
         div {
             margin-top: 1%;
-
-            i {
-                color: #fc7617;
-            }
+            display: flex;
 
             a {
                 text-decoration: none;
                 color: #4c4c4c;
+                margin-left: 5%;
 
             }
         }

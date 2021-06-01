@@ -55,7 +55,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
                                     <div class="head-article">
                             <h1>${article.nameArticle}</h1>
-                            <div><i class="fas fa-long-arrow-alt-left"></i> <a href="./galleryNews.html">Volver</a></div>
+                            <div><img src="../assets/iconos/back1.png" alt="noticias-imax"> <a href="./galleryNews.html">Volver</a></div>
                             </div>
                             <div class="container-single-notice">
                                 <div class="box-noticia-content">

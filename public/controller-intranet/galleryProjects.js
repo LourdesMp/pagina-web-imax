@@ -61,7 +61,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
                                     <div class="head-project">
                                                 <h1>${project.nombre} (${project.servicio})</h1>
-                                                <div><i class="fas fa-long-arrow-alt-left"></i> <a href="./proyectos.html">Volver</a></div>
+                                                <div><img src="../assets/iconos/back1.png" alt="proyectos-imax"><a href="./proyectos.html">Volver</a></div>
                                     </div>
                                     <div class="box-img"><img src="${project.urlProject}" alt=""></div>
 
