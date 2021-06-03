@@ -865,15 +865,15 @@
 
 .single-project .head-project div {
   margin-top: 1%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
 }
 
 .single-project .head-project div a {
   text-decoration: none;
   color: #4c4c4c;
   margin-left: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .single-project .box-img {
@@ -1009,7 +1009,7 @@
   border: 0;
   cursor: pointer;
   color: white;
-  font-size: 18px;
+  font-size: 118%;
   margin-bottom: 5%;
   padding-top: 5px;
   padding-left: 10px;
@@ -1031,10 +1031,13 @@
   }
   .single-project .head-project div {
     position: relative;
-    right: 35px;
+    right: 15px;
   }
   .single-project .head-project div a {
     position: absolute;
+  }
+  .single-project .head-project div a p {
+    display: none;
   }
   .single-project .service-container .content-service {
     -webkit-box-orient: vertical;
@@ -2956,13 +2959,16 @@
   border-radius: 8px;
 }
 
-.tools-container .add-proyect-container .generate-project .containerProgress .progresslineCarrusel,
+.tools-container .add-proyect-container .generate-project .containerProgress .progresslineCarrusel, .tools-container .add-proyect-container .generate-project .containerProgress .progresslineArticle,
 .tools-container .add-proyect-container .generate-project .containerProgress .progressline,
 .tools-container .add-proyect-container .generate-article .containerProgress .progresslineCarrusel,
+.tools-container .add-proyect-container .generate-article .containerProgress .progresslineArticle,
 .tools-container .add-proyect-container .generate-article .containerProgress .progressline,
 .tools-container .add-article-container .generate-project .containerProgress .progresslineCarrusel,
+.tools-container .add-article-container .generate-project .containerProgress .progresslineArticle,
 .tools-container .add-article-container .generate-project .containerProgress .progressline,
 .tools-container .add-article-container .generate-article .containerProgress .progresslineCarrusel,
+.tools-container .add-article-container .generate-article .containerProgress .progresslineArticle,
 .tools-container .add-article-container .generate-article .containerProgress .progressline {
   width: 0%;
   height: 15px;

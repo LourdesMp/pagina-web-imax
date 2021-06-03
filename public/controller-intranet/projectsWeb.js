@@ -34,9 +34,7 @@
          (snapshot) => {
            const percent =
              (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-           const progressArticle = document.querySelector(
-             ".progresslineArticle"
-           );
+           const progressArticle = document.querySelector( ".progresslineArticle");
            progressArticle.parentNode.classList.add("show");
            progressArticle.innerText = `${percent.toFixed(0)}%`;
            progressArticle.style.width = `${percent}%`;
@@ -48,6 +46,10 @@
              urlArticle = downloadURL;
              sessionStorage.setItem("imgArticle", urlArticle);
            });
+           setTimeout(() => {
+            const progressArticle = document.querySelector( ".progresslineArticle");
+            progressArticle.parentNode.classList.remove("show");
+          }, 2500);
          }
        );
      }

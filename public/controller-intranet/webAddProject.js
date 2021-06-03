@@ -88,6 +88,10 @@ if (btnImgLarge) {
             urlProjectLarge = downloadURL;
             sessionStorage.setItem("imgProjectLarge", urlProjectLarge);
           });
+          setTimeout(() => {
+          const progressCarrusel = document.querySelector(".progressline");
+            progressCarrusel.parentNode.classList.remove("show");
+          }, 2500);
         }
       );
     }
