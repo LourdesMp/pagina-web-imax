@@ -53,7 +53,8 @@
                 border-radius: 8px;
 
 
-                .progresslineCarrusel, .progresslineArticle,
+                .progresslineCarrusel,
+                .progresslineArticle,
                 .progressline {
                     width: 0%;
                     height: 15px;
@@ -132,10 +133,10 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    padding-left: 15%;
+
 
     .box-notice {
-        width: 25%;
+        width: 30%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -150,20 +151,21 @@
         figure {
             position: relative;
             width: 100%;
-            height: 65vh;
+            height: 60vh;
             transition: all 500ms ease-out;
             // overflow: hidden;
             // cursor: pointer;
 
             img {
                 width: 100%;
-                height: 72%;
+                height: 75%;
                 transition: all 500ms ease-out;
             }
 
             .capa-notice {
                 position: absolute;
-                top: 70%;
+                top: 72%;
+                width: 100%;
 
 
 
@@ -173,7 +175,7 @@
                     padding: 5% 5% 0 5%;
 
                     .title-notice {
-                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        // font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                         font-size: 20px;
                         font-weight: bold;
                     }
@@ -189,9 +191,9 @@
                         font-size: 15px;
                         font-weight: bold;
                         color: #fc7617;
-                        opacity: 0;
-                        visibility: hidden;
-                        width: 20%;
+                        // opacity: 0;
+                        // visibility: hidden;
+                        width: 25%;
                         border: none;
                         background: transparent;
                         cursor: pointer;
@@ -206,21 +208,21 @@
     }
 
 
-    .box-notice:hover {
-        width: 40%;
-        transition: all 1000ms ease-out;
-    }
+    // .box-notice:hover {
+    //     width: 40%;
+    //     transition: all 1000ms ease-out;
+    // }
 
-    .box-notice:hover>figure {
-        height: 100%;
-        transition: all 500ms ease-out;
-    }
+    // .box-notice:hover>figure {
+    //     height: 100%;
+    //     transition: all 500ms ease-out;
+    // }
 
-    .box-notice:hover>figure img {
-        height: 100%;
-        transition: all 500ms ease-out;
+    // .box-notice:hover>figure img {
+    //     height: 100%;
+    //     transition: all 500ms ease-out;
 
-    }
+    // }
 
     figure:hover>.capa-notice {
         top: 0;
@@ -231,13 +233,18 @@
     }
 
     figure:hover>.capa-notice .detail-notice {
-        margin-top: 56%;
+        margin-top: 71%;
         transition: all 1000ms ease-out;
     }
 
     figure:hover>.capa-notice .detail-notice .view-more {
         opacity: 1;
         visibility: visible;
+        width: 30%;
+        background: #fc7617;
+        color: white;
+        border-radius: 15px;
+        margin: 2% 0%;
 
     }
 
