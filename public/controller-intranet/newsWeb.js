@@ -77,27 +77,27 @@ window.addEventListener("DOMContentLoaded", async (e) => {
 
 
 
-                                onGetArticles((querySnapshot) => {
-                                    miniGallery.innerHTML = "";
-                                    querySnapshot.forEach((doc) => {
-                                        const article = doc.data();
-                                        article.id = doc.id;
-                                        miniGallery.innerHTML += `<div class="box-notice">
-                                    <figure>
-                                        <img src="${article.urlArticle}" alt="">
-                                        <div class="capa-notice">
-                                            <div class="detail-notice">
-                                                <h1 class="title-notice">${article.nameArticle}</h1>
-                                                <p>${article.descriptionArticle}</p>
-                                                <a class="view-more" href="./galleryNews.html">Ver más</a>
-                                            </div>
-                                        </div>
-                                    </figure>
+                                // onGetArticles((querySnapshot) => {
+                                //     miniGallery.innerHTML = "";
+                                //     querySnapshot.forEach((doc) => {
+                                //         const article = doc.data();
+                                //         article.id = doc.id;
+                                //         miniGallery.innerHTML += `<div class="box-notice">
+                                //     <figure>
+                                //         <img src="${article.urlArticle}" alt="">
+                                //         <div class="capa-notice">
+                                //             <div class="detail-notice">
+                                //                 <h1 class="title-notice">${article.nameArticle}</h1>
+                                //                 <p>${article.descriptionArticle}</p>
+                                //                 <a class="view-more" href="./galleryNews.html">Ver más</a>
+                                //             </div>
+                                //         </div>
+                                //     </figure>
                                     
-                                </div>`
-                                    })
-                                })
-                                singleArticle.appendChild(miniGallery)
+                                // </div>`
+                                //     })
+                                // })
+                                // singleArticle.appendChild(miniGallery)
 
 
 
