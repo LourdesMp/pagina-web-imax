@@ -71,14 +71,32 @@
                         <label for="descriptionArticle">Descripción de la noticia: </label>
                         <input type="text" name="descriptionArticle" id="descriptionArticle" class="descriptionArticle">
                     </div>
+                    <div class="aaaaa">
+                        <label for="">Agregar imagen para el Carrusel de Noticias: (Dimensiones 800 x 800) </label>
+                        
+                     <label for="addImgCarrusel" style='font-size: 20px'>
+                            <i class="fas fa-camera"></i>
+                        </label>
+                        <input type="file" id="addImgCarrusel" accept="image/*" class="addImgCarrusel">
+                        <br>
+                        <div class="containerProgress hide">
+                            <!-- <progress value= "0" max= "100" id="uploader">0%</progress> -->
+                            <div class="progresslineCarrusel"></div>
+                        </div>
+
+                        <!-- <div class="hide divImg">
+                        <span class="deleteImg">❌</span>
+                        <img class="picPost" />
+                    </div> -->
+                    </div>
 
                     <div class="progress">
                         <label for="">Agregar imagen principal de la noticia (Dimensiones 1000 x 400) </label>
-                        
-                        <input type="file" id="addImgArticle" accept="image/*" class="addImgArticle">
                         <label for="addImgArticle" style='font-size: 20px'>
                             <i class="fas fa-camera"></i>
-                        </label> <br>
+                        </label>
+                        <input type="file" id="addImgArticle" accept="image/*" class="addImgArticle">
+                         <br>
                         <div class="containerProgress hide">
                             <!-- <progress value= "0" max= "100" id="uploader">0%</progress> -->
                             <div class="progresslineArticle"></div>
@@ -122,7 +140,7 @@
 
 
     <script src="../controller-intranet/nav.js"></script>
-    <script src="../controller-intranet/projectsWeb.js"> </script>
+    <script src="../controller-intranet/noticeWeb.js"> </script>
 </body>
 
 </html>

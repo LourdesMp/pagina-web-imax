@@ -54,7 +54,7 @@ fs.collection('users').onSnapshot((querySnapshot) => {
         onlyMarketing.innerHTML += `
         <li><a href="#/" class="admin-web">Herramientas IMAX
         <ul class="nav-admin-web hide">
-              <a href="projectsWeb.html" ><li class="btn-admin-boletas second-parent" >Agregar Noticia Web</li></a>
+              <a href="noticeWeb.html" ><li class="btn-admin-boletas second-parent" >Agregar Noticia Web</li></a>
               <a href="webAddProject.html" ><li class="btn-admi-const second-parent" >Agregar Proyecto </li></a>
           </ul>
         </a></li> `;

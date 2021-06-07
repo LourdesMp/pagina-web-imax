@@ -54,9 +54,12 @@ window.addEventListener("DOMContentLoaded", async (e) => {
                                 singleArticle.innerHTML += `
 
                                     <div class="head-article">
-                            <h1>${article.nameArticle}</h1>
-                            <div><img src="../assets/iconos/back1.png" alt="noticias-imax"> <a href="./galleryNews.html">Volver</a></div>
-                            </div>
+                                        <div class="box-name-article">
+                                            <h1>${article.nameArticle}</h1>
+                                            <p>${article.dateArticle}</p>
+                                        </div>
+                                        <div class="back-notice"> <a href="./galleryNews.html"><img src="../assets/iconos/back1.png" alt="servicios-imax"> <p>Volver</p> </a></div>
+                                    </div>
                             <div class="container-single-notice">
                                 <div class="box-noticia-content">
                                     <figure>
@@ -68,11 +71,11 @@ window.addEventListener("DOMContentLoaded", async (e) => {
                                 
                             </div>`;
 
-                                const contentApp = document.querySelectorAll(".container-single-notice")
-                                console.log(contentApp)
+                                // const contentApp = document.querySelectorAll(".container-single-notice")
+                                // console.log(contentApp)
 
-                                const miniGallery = document.createElement("div");
-                                miniGallery.classList = "minibox-gallery-notice";
+                                // const miniGallery = document.createElement("div");
+                                // miniGallery.classList = "minibox-gallery-notice";
 
 
 
@@ -93,7 +96,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
                                 //             </div>
                                 //         </div>
                                 //     </figure>
-                                    
+
                                 // </div>`
                                 //     })
                                 // })
