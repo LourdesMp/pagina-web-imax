@@ -2,9 +2,11 @@
 
  // FUNCIONES PARA FORMULARIO DE NOTICIAS ******************************************************
 
- const saveArticle = (nameArticle,urlArticle,descriptionArticle, contentArticle) => {
+ const saveArticle = (nameArticle, dateArticle, urlArticleCarrusel, urlArticle,descriptionArticle, contentArticle) => {
    return fs.collection("articles").add({
      nameArticle,
+     dateArticle, 
+     urlArticleCarrusel,
      urlArticle,
      descriptionArticle,
      contentArticle,
@@ -12,8 +14,51 @@
    });
  };
 
+ let dataFile;
+const currentUser = () => firebase.auth().currentUser;
+const btnImgCarrusel = document.querySelector("#addImgCarrusel");
+if (btnImgCarrusel) {
+  btnImgCarrusel.addEventListener("change", (e) => {
+    console.log("CLICK SUBIR IMAGEN", e.target.files[0]);
+    // Get file
+    dataFile = e.target.files[0];
+    if (dataFile) {
+      const storageRef = firebase
+        .storage()
+        .ref(`noticeCarrusel/${currentUser().email}/${dataFile.name}`);
+      // Upload data
+      const task = storageRef.put(dataFile);
+      console.log(task);
+      // Update progress bar
+      let urlCarrusel = "";
+      task.on(
+        "state_changed",
+        (snapshot) => {
+          const percent =
+            (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+          const progressCarrusel = document.querySelector(".progresslineCarrusel");
+          progressCarrusel.parentNode.classList.add("show");
+          progressCarrusel.innerText = `${percent.toFixed(0)}%`;
+          progressCarrusel.style.width = `${percent}%`;
+        },
+        () => {},
+        () => {
+          task.snapshot.ref.getDownloadURL().then((downloadURL) => {
+            console.log("File available at", downloadURL);
+            urlCarrusel = downloadURL;
+            sessionStorage.setItem("imgCarrusel", urlCarrusel);
+          });
+            setTimeout(() => {
+            const progressCarrusel = document.querySelector(".progresslineCarrusel");
+            progressCarrusel.parentNode.classList.remove("show");
+          }, 2500);
+        }
+      );
+    }
+  });
+}
+
  let fileArticle;
- const currentUser = () => firebase.auth().currentUser;
  const btnImgArticle = document.querySelector("#addImgArticle");
  if (btnImgArticle) {
    btnImgArticle.addEventListener("change", (e) => {
@@ -66,13 +111,15 @@
    const userLogueado = firebase.auth().currentUser;
    console.log(userLogueado);
    const useruid = userLogueado.uid;
+   const urlArticleCarrusel = sessionStorage.getItem("imgCarrusel");
    const urlArticle = sessionStorage.getItem("imgArticle");
    const nameArticle = document.querySelector(".nameArticle").value;
+   const dateArticle = document.querySelector(".fechaAdmin").value
    const descriptionArticle = document.querySelector(".descriptionArticle").value;
    const contentArticle = document.querySelector(".newArticle").value;
 
-   if (urlArticle) {
-     saveArticle(nameArticle, urlArticle, descriptionArticle, contentArticle,  useruid).then(() => {
+   if (urlArticle && urlArticleCarrusel) {
+     saveArticle(nameArticle, dateArticle, urlArticleCarrusel, urlArticle, descriptionArticle, contentArticle,  useruid).then(() => {
        // if (userLogueado !== null) {
        //   loadPostHome();
        // }
