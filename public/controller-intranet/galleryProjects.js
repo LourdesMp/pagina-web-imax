@@ -1,4 +1,4 @@
-const onGetProjects = (callback) => fs.collection("projects").onSnapshot(callback);
+const onGetProjects = (callback) => fs.collection("projects").orderBy('datetime', 'desc').onSnapshot(callback);
 
 const projectContainer = document.querySelector(".box-par");
 window.addEventListener("DOMContentLoaded", async (e) => {

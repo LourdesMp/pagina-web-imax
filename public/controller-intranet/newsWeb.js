@@ -1,4 +1,5 @@
-const onGetArticles = (callback) => fs.collection("articles").onSnapshot(callback);
+const onGetArticles = (callback) => fs.collection("articles").orderBy('datetime', 'desc').onSnapshot(callback);
+
 
 const noticeWebContainer = document.querySelector(".notice-web-container");
 
@@ -13,7 +14,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
             noticeWebContainer.innerHTML += `
         <div class="box-notice">
                 <figure>
-                    <img src="${article.urlArticle}" alt="">
+                    <img src="${article.urlArticleCarrusel}" alt="">
                     <div class="capa-notice">
                         <div class="detail-notice">
                             <h1 class="title-notice">${article.nameArticle}</h1>

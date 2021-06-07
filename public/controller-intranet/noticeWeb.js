@@ -2,7 +2,7 @@
 
  // FUNCIONES PARA FORMULARIO DE NOTICIAS ******************************************************
 
- const saveArticle = (nameArticle, dateArticle, urlArticleCarrusel, urlArticle,descriptionArticle, contentArticle) => {
+ const saveArticle = (nameArticle, dateArticle, urlArticleCarrusel, urlArticle,descriptionArticle, contentArticle, datetime, useruid) => {
    return fs.collection("articles").add({
      nameArticle,
      dateArticle, 
@@ -10,6 +10,8 @@
      urlArticle,
      descriptionArticle,
      contentArticle,
+     datetime,
+      useruid
     
    });
  };
@@ -117,9 +119,11 @@ if (btnImgCarrusel) {
    const dateArticle = document.querySelector(".fechaAdmin").value
    const descriptionArticle = document.querySelector(".descriptionArticle").value;
    const contentArticle = document.querySelector(".newArticle").value;
+   const hours = new Date();
+   const datetime = (`${hours.getFullYear()}${hours.getMonth() + 1}${hours.getDate()}${hours.getHours()}${hours.getMinutes()}${hours.getSeconds()}`);
 
    if (urlArticle && urlArticleCarrusel) {
-     saveArticle(nameArticle, dateArticle, urlArticleCarrusel, urlArticle, descriptionArticle, contentArticle,  useruid).then(() => {
+     saveArticle(nameArticle, dateArticle, urlArticleCarrusel, urlArticle, descriptionArticle, contentArticle, datetime,  useruid).then(() => {
        // if (userLogueado !== null) {
        //   loadPostHome();
        // }

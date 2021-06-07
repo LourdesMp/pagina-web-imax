@@ -1,4 +1,4 @@
-const saveProjects = (nombre,servicio,description,urlCarrusel,urlProject,checkProjectHome,content,useruid) => {
+const saveProjects = (nombre,servicio,description,urlCarrusel,urlProject,checkProjectHome,content, datetime,useruid) => {
   return fs.collection("projects").add({
     nombre,
     servicio,
@@ -8,6 +8,7 @@ const saveProjects = (nombre,servicio,description,urlCarrusel,urlProject,checkPr
     checkProjectHome,
     content,
     useruid,
+    datetime
   });
 };
 
@@ -129,15 +130,17 @@ generateProject.addEventListener("submit", (event) => {
   const urlCarrusel = sessionStorage.getItem("imgCarrusel");
   const urlProject = sessionStorage.getItem("imgProjectLarge");
   const nombre = document.querySelector(".nameProject").value;
-  console.log(nombre);
+
   const servicio = document.querySelector(".typeService").value;
-  console.log(servicio);
+
   const description = document.querySelector(".descriptionProject").value;
-  console.log(description);
+
   const checkProjectHome = document.querySelector(".checkProjectHome").value;
-  console.log(checkProjectHome);
+
   const content = document.querySelector(".newPublication").value;
-  console.log(content);
+  const hours = new Date();
+  const datetime = (`${hours.getFullYear()}${hours.getMonth() + 1}${hours.getDate()}${hours.getHours()}${hours.getMinutes()}${hours.getSeconds()}`);
+
   if (urlProject && urlCarrusel) {
     saveProjects(
       nombre,
@@ -147,6 +150,7 @@ generateProject.addEventListener("submit", (event) => {
       urlProject,
       checkProjectHome,
       content,
+      datetime,
       useruid
     ).then(() => {
       // if (userLogueado !== null) {
