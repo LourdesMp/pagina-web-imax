@@ -65,7 +65,7 @@ window.addEventListener("DOMContentLoaded", async (e) => {
                                 <div class="box-noticia-content">
                                     <figure>
                                         <img src="${article.urlArticle}" alt="">
-                                        <p class="title-single-notice">${article.nameArticle}</p>
+                                       
                                     </figure>
                                     <p class="news-content">${article.contentArticle}</p>
                                 </div>

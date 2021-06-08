@@ -3168,7 +3168,7 @@
 
 .notice-web-container figure:hover > .capa-notice {
   color: white;
-  background: rgba(0, 0, 0, 0.8);
+  background: rgba(0, 0, 0, 0.6);
   opacity: 1;
   visibility: visible;
 }
@@ -3375,6 +3375,7 @@
   .notice-web-container .box-notice {
     width: 100%;
     height: 50vh;
+    z-index: 2;
   }
   .notice-web-container .box-notice figure {
     width: 100%;
@@ -3391,7 +3392,10 @@
     color: white;
   }
   .notice-web-container .box-notice figure .capa-notice .detail-notice {
-    margin-top: 50%;
+    margin-top: 35%;
+  }
+  .notice-web-container .box-notice figure .capa-notice .detail-notice .title-notice {
+    font-size: 18px;
   }
   .notice-web-container .box-notice figure .capa-notice .detail-notice .view-more {
     opacity: 1;
