@@ -3392,7 +3392,9 @@
     color: white;
   }
   .notice-web-container .box-notice figure .capa-notice .detail-notice {
-    margin-top: 35%;
+    position: relative;
+    margin-top: 45%;
+    bottom: 5%;
   }
   .notice-web-container .box-notice figure .capa-notice .detail-notice .title-notice {
     font-size: 18px;
@@ -3404,7 +3406,8 @@
     background: #fc7617;
     color: white;
     border-radius: 15px;
-    margin: 5% 0%;
+    margin: 1% 0%;
+    padding: 1% 0%;
   }
   .notice-web-container .box-notice:hover {
     width: 100%;

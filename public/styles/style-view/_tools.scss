@@ -155,7 +155,7 @@
             height: 60vh;
             transition: all 500ms ease-out;
             overflow: hidden;
-          
+
 
             img {
                 width: 100%;
@@ -236,7 +236,7 @@
         color: white;
         border-radius: 15px;
         margin: 2% 0%;
-          cursor: pointer;
+        cursor: pointer;
 
     }
 
@@ -267,7 +267,7 @@
 
             p {
                 font-size: 15px;
-                color:#5f5f5f;
+                color: #5f5f5f;
             }
         }
 
@@ -438,8 +438,11 @@
                     color: white;
 
                     .detail-notice {
-                        margin-top: 35%;
-                     
+                        position: relative;
+                        margin-top: 45%;
+
+                        bottom: 5%;
+
                         .title-notice {
                             font-size: 18px;
                         }
@@ -451,7 +454,8 @@
                             background: #fc7617;
                             color: white;
                             border-radius: 15px;
-                            margin: 5% 0%;
+                            margin: 1% 0%;
+                            padding: 1% 0%;
 
                         }
                     }
