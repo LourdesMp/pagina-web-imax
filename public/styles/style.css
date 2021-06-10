@@ -430,7 +430,7 @@
     padding-top: 5%;
   }
   .servicios-container .box-par .square {
-    height: 70vh;
+    height: 90vh;
     width: 80%;
     margin-bottom: 10%;
     -webkit-box-shadow: 0 0 0 1px white, 0 0 0 0px, 0 3px 5px;
@@ -3388,7 +3388,7 @@
     bottom: 5%;
   }
   .notice-web-container .box-notice figure .capa-notice .detail-notice .title-notice {
-    font-size: 18px;
+    font-size: 22px;
     text-shadow: 1px 1px 1px #000;
   }
   .notice-web-container .box-notice figure .capa-notice .detail-notice p {
