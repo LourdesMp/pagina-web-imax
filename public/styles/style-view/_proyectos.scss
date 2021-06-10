@@ -51,6 +51,9 @@
                     opacity: 0;
                     visibility: hidden;
                     text-align: center;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
 
                     .capa1 {
 
@@ -86,7 +89,7 @@
 
                     .capa2 {
 
-                        margin-top: 15%;
+                        margin-bottom: 8%;
                         padding-right: 5%;
                         padding-left: 5%;
 
@@ -139,7 +142,7 @@
     }
 
 
- 
+
 
     .model-project.active img {
         z-index: 1;
@@ -204,7 +207,7 @@
 
         div {
             margin-top: 1%;
-           
+
 
             a {
                 text-decoration: none;
@@ -383,7 +386,8 @@
 
                 a {
                     position: absolute;
-                    p{
+
+                    p {
                         display: none;
                     }
                 }
@@ -421,22 +425,43 @@
 
         .box-par .square {
             width: 100%;
+
+            figure .capa-detailed {
+                opacity: 1;
+                visibility: visible;
+                background: rgba(0, 0, 0, 0.0);
+
+                .capa1 .capa-icon {
+                    border: 1px solid #009AD2;
+                    height: 38px;
+                }
+
+                .capa2 {
+
+                    .title-project{
+font-size: 22px;
+text-shadow: 1px 1px 1px #000;
+                    }
+                    p {
+text-shadow: 1px 1px 1px #000;
+                        
+                    }
+
+
+                }
+            }
+
+            figure:hover>img {
+                transform: scale(1);
+            }
+
+
         }
+
+
 
         .model-project.active img {
             width: 100%;
         }
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-

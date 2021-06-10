@@ -250,10 +250,20 @@
   opacity: 0;
   visibility: hidden;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .servicios-container .box-par .square figure .capa-detailed .capa1 {
-  margin-top: 150%;
+  margin-bottom: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -290,8 +300,9 @@
 
 .servicios-container .box-par .square figure .capa-detailed .capa1 h2 {
   color: white;
-  font-size: 150%;
+  font-size: 160%;
   margin-bottom: 3px;
+  text-shadow: 2px 1px 1px #000;
 }
 
 .servicios-container .box-par .square figure .capa-detailed .capa1 a {
@@ -419,15 +430,26 @@
     padding-top: 5%;
   }
   .servicios-container .box-par .square {
-    height: 90vh;
+    height: 70vh;
     width: 80%;
     margin-bottom: 10%;
+    -webkit-box-shadow: 0 0 0 1px white, 0 0 0 0px, 0 3px 5px;
+            box-shadow: 0 0 0 1px white, 0 0 0 0px, 0 3px 5px;
+  }
+  .servicios-container .box-par .square figure .capa-detailed {
+    background: rgba(29, 123, 211, 0);
+    opacity: 1;
+    visibility: visible;
   }
   .servicios-container .box-par .square figure .capa-detailed .capa1 {
-    margin-top: 120%;
+    margin-bottom: 15%;
+  }
+  .servicios-container .box-par .square figure .capa-detailed .capa1 h2 {
+    font-size: 30px;
   }
   .servicios-container .box-par .square figure .capa-detailed .capa1 a .quotationService {
     height: 30px;
+    margin-top: 5%;
   }
 }
 
@@ -735,6 +757,16 @@
   opacity: 0;
   visibility: hidden;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .projects-gallery-container .box-par .square figure .capa-detailed .capa1 {
@@ -770,7 +802,7 @@
 }
 
 .projects-gallery-container .box-par .square figure .capa-detailed .capa2 {
-  margin-top: 15%;
+  margin-bottom: 8%;
   padding-right: 5%;
   padding-left: 5%;
 }
@@ -1064,6 +1096,26 @@
   }
   .projects-gallery-container .box-par .square {
     width: 100%;
+  }
+  .projects-gallery-container .box-par .square figure .capa-detailed {
+    opacity: 1;
+    visibility: visible;
+    background: rgba(0, 0, 0, 0);
+  }
+  .projects-gallery-container .box-par .square figure .capa-detailed .capa1 .capa-icon {
+    border: 1px solid #009AD2;
+    height: 38px;
+  }
+  .projects-gallery-container .box-par .square figure .capa-detailed .capa2 .title-project {
+    font-size: 22px;
+    text-shadow: 1px 1px 1px #000;
+  }
+  .projects-gallery-container .box-par .square figure .capa-detailed .capa2 p {
+    text-shadow: 1px 1px 1px #000;
+  }
+  .projects-gallery-container .box-par .square figure:hover > img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
   .projects-gallery-container .model-project.active img {
     width: 100%;
@@ -3313,6 +3365,7 @@
     width: 100%;
     height: 50vh;
     z-index: 2;
+    margin: 1% 0%;
   }
   .notice-web-container .box-notice figure {
     width: 100%;
@@ -3327,6 +3380,8 @@
     width: 100%;
     height: 100%;
     color: white;
+    opacity: 1;
+    visibility: visible;
   }
   .notice-web-container .box-notice figure .capa-notice .detail-notice {
     position: relative;
@@ -3334,6 +3389,10 @@
   }
   .notice-web-container .box-notice figure .capa-notice .detail-notice .title-notice {
     font-size: 18px;
+    text-shadow: 1px 1px 1px #000;
+  }
+  .notice-web-container .box-notice figure .capa-notice .detail-notice p {
+    text-shadow: 1px 1px 1px #000;
   }
   .notice-web-container .box-notice figure .capa-notice .detail-notice .view-more {
     opacity: 1;
@@ -3342,8 +3401,18 @@
     background: #fc7617;
     color: white;
     border-radius: 15px;
-    margin: 1% 0%;
+    margin-top: 2%;
     padding: 1% 0%;
+  }
+  .notice-web-container .box-notice figure:hover > img {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .notice-web-container .box-notice figure:hover > .capa-notice {
+    color: white;
+    background: rgba(0, 0, 0, 0);
+    opacity: 1;
+    visibility: visible;
   }
   .notice-web-container .box-notice:hover {
     width: 100%;
