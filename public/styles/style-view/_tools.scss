@@ -126,8 +126,20 @@
     }
 }
 
+.description-project {
+            display: block;
+            background: #eaeaea;
+            color: #474747;
+            padding: 20px;
+            text-align: justify;
+
+        }
 
 // estilos vista NOTICIAS WEB
+
+    .description-project {
+         display: none;
+        }
 .notice-web-container {
     background: white;
     display: flex;
@@ -417,6 +429,14 @@
 // }
 
 @media screen and (max-width: 500px) {
+    .description-project {
+            display: block;
+            background: #eaeaea;
+            color: #474747;
+            padding: 20px;
+            text-align: justify;
+
+        }
     .notice-web-container {
         padding-left: 0%;
 

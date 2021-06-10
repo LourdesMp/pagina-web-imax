@@ -3062,6 +3062,18 @@
   margin: 2% 0 1% 35%;
 }
 
+.description-project {
+  display: block;
+  background: #eaeaea;
+  color: #474747;
+  padding: 20px;
+  text-align: justify;
+}
+
+.description-project {
+  display: none;
+}
+
 .notice-web-container {
   background: white;
   display: -webkit-box;
@@ -3287,6 +3299,13 @@
 }
 
 @media screen and (max-width: 500px) {
+  .description-project {
+    display: block;
+    background: #eaeaea;
+    color: #474747;
+    padding: 20px;
+    text-align: justify;
+  }
   .notice-web-container {
     padding-left: 0%;
   }
